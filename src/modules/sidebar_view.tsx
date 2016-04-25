@@ -5,11 +5,6 @@ import "semantic-ui-css/components/reset.css";
 import "semantic-ui-css/components/sidebar.css";
 import "semantic-ui-css/components/sidebar.js";
 
-interface ITab {
-  title: string;
-  children?: any;
-}
-
 interface IProps {
   classes?: string;
   id: string;

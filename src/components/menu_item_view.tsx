@@ -12,11 +12,11 @@ export interface IProps {
 }
 
 
-export const Item = ({classes, icon, text, children, link }: IProps) => (
+export const MenuItem = ({classes, icon, text, children, link }: IProps) => (
   <a className={css(classes, "item") } href={link}>
     { icon ? <i className={css("icon", icon) }></i> : null }
     { text }
   </a>
 );
 
-export default Item;
+export default MenuItem;

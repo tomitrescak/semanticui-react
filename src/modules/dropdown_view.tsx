@@ -49,12 +49,14 @@ export class Dropdown extends React.Component<IProps, {}> {
 interface IDropdownItem {
   value?: string;
   image?: string;
+  icon?: string;
   text: string;
 }
 
-export const DropdownItem = ({ value, text, image }: IDropdownItem) => (
+export const DropdownItem = ({ value, text, image, icon }: IDropdownItem) => (
   <div className="item" data-value={value ? value : text}>
-    { image ? <img class="ui mini avatar image" src={image} /> : null }
+    { icon ? <i className={css(icon, "icon")}></i> : null }
+    { image ? <img className="ui mini avatar image" src={image} /> : null }
     { text }
   </div>
 );
