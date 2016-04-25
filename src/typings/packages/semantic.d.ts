@@ -10,6 +10,8 @@ interface JQuery {
   popup(): any;
   accordion(options: any): any;
   sidebar(...params: any[]): any;
+  rating(...params: any[]): any;
+  progress(...params: any[]): any;
 }
 
 interface JQueryStatic {

@@ -14,7 +14,7 @@ interface II18n {
 
 import Intl from "./containers/intl_container";
 
-import item, { IProps as IItemProps} from "./components/item_view";
+import item, { IProps as IItemProps} from "./components/menu_item_view";
 interface I18ItemProps extends II18n, IItemProps { }
 export const Item = Intl<I18ItemProps>(item);
 

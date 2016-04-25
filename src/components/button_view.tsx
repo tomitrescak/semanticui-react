@@ -9,7 +9,7 @@ export interface IButtonProps {
   classes?: string;
   text?: string;
   basic?: boolean;
-  color?: "primary" | "secondary" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
+  color?: "primary" | "secondary" | "success" | "failure" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
   inverted?: boolean;
   compact?: boolean;
   icon?: string;

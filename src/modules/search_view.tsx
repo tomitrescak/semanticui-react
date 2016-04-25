@@ -1,0 +1,48 @@
+import * as React from "react";
+import * as css from "classnames";
+
+import "semantic-ui-css/components/input.css";
+import "semantic-ui-css/components/search.css";
+import "semantic-ui-css/components/search.js";
+
+
+interface IProps {
+  classes?: string;
+  id: string;
+  text: string;
+  loading?: boolean;
+  fluid?: boolean;
+  category?: boolean;
+  values?: { title: string }[];
+  setup?: Function;
+}
+
+
+export default class Search extends React.Component<IProps, {}> {
+  render() {
+    return (
+      <div id={this.props.id} className={css("ui",
+        {
+          "loading": this.props.loading,
+          "fluid": this.props.fluid,
+          "category": this.props.category
+        },"search")}>
+        <div className="ui icon input">
+          <input className="prompt" type="text" placeholder={this.props.text} />
+          <i className="search icon"></i>
+        </div>
+        <div className="results"></div>
+      </div>
+    );
+  }
+
+  componentDidMount() {
+    if (this.props.values) {
+        $("#" + this.props.id).search({ source: this.props.values });
+    }
+
+    if (this.props.setup) {
+      this.props.setup();
+    }
+  }
+}

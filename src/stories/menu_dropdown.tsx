@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf, action } from "@kadira/storybook";
 
 import { Menu } from "../index";
-import { Item, MenuDropdown } from "../index";
+import { MenuItem, MenuDropdown } from "../index";
 import { MenuDropdown as MenuDropdownIntl, Item as ItemIntl } from "../i18n";
 
 //import "semantic-ui-css/components/reset.css";
@@ -19,8 +19,8 @@ storiesOf("Menu.Dropdown", module)
     return (
       <Menu>
         <MenuDropdown text="Tomi" id="test">
-          <Item text="Item 1" link="#" icon="bug" />
-          <Item text="Item 2" link="#" />
+          <MenuItem text="Item 1" link="#" icon="bug" />
+          <MenuItem text="Item 2" link="#" />
         </MenuDropdown>
       </Menu>
     );

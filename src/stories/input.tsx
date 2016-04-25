@@ -32,6 +32,13 @@ storiesOf("Input", module)
       </Form>
     );
   })
+  .add("input with label", () => {
+    return (
+      <Form>
+        <Input placeholder="My Placeholder" label="My label" />
+      </Form>
+    );
+  })
   .add("input action", () => {
     return (
       <Form>

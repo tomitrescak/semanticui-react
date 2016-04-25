@@ -26,6 +26,7 @@ export default class  extends React.Component<IProps, {}> {
 
     return (
       <div className="field">
+        { this.props.label ? <label>{ this.props.label }</label> : null }
         <div className={css("ui", this.props.iconPosition, { icon: this.props.icon }, this.props.classes, "input") }>
           <input
             ref="input"

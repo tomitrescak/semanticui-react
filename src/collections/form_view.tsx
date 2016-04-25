@@ -9,10 +9,10 @@ interface IProps {
 }
 
 
-export const Grid = ({classes, children}: IProps) => (
+export const Form = ({classes, children}: IProps) => (
   <div className={css("ui", classes, "form")}>
     { children }
   </div>
 );
 
-export default Grid;
+export default Form;
