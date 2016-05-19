@@ -1,7 +1,7 @@
 import "semantic-ui-css/components/site.css";
 
 function check() {
-  throw "Control not initialised. Did you forget to call Init?"
+  throw new Error("Control not initialised. Did you forget to call Init?");
 }
 
 let _segment: any = null;
