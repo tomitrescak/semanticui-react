@@ -14,10 +14,11 @@ interface IProps {
   circular?: boolean;
   alignment?: "left" | "center" | "right";
   float?: "left" | "right";
+  style: any;
 }
 
-export const Segment = ({classes, children, attached, loading, inverted, compact, color, circular, alignment, float }: IProps) => (
-  <div className={css("ui", classes, attached,
+export const Segment = ({classes, children, attached, loading, inverted, compact, color, circular, alignment, float, style }: IProps) => (
+  <div style={style} className={css("ui", classes, attached,
     {
       "attached": attached,
       "inverted": inverted,

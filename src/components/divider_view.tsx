@@ -12,11 +12,11 @@ interface IProps {
   isHeader?: boolean;
 }
 
-export const Segment = ({classes, children, icon, isHeader, orientation, inverted }: IProps) => (
+export const Divider = ({classes, children, icon, isHeader, orientation, inverted }: IProps) => (
   <div className={css("ui", orientation, "divider", { "inverted": inverted, "header": isHeader })}>
     { icon ? <i className={css(icon, "icon")}></i> : null }
     { children }
   </div>
 );
 
-export default Segment;
+export default Divider;

@@ -17,12 +17,13 @@ interface IProps {
   multiple?: boolean;
   children?: any;
   activation: "hover" | "click";
+  label: string;
 }
 
 export class Dropdown extends React.Component<IProps, {}> {
   render() {
     let selection = this.props.selection === undefined ? true : false;
-    return (
+    const dropdown = (
       <div className={css("ui", {
           "selection": selection,
           "fluid": this.props.fluid,
@@ -39,6 +40,18 @@ export class Dropdown extends React.Component<IProps, {}> {
         </div>
       </div>
     );
+
+    // we either render as field or as a separate dropdown
+    if (this.props.label) {
+      return (
+        <div className="field">
+          <label>{ this.props.label }</label>
+          { dropdown }
+        </div>
+      );
+    } else {
+      return dropdown;
+    }
   }
 
   componentDidMount() {

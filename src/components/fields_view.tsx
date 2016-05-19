@@ -14,4 +14,11 @@ export const Fields = ({ children, type, label }: IProps) => (
   </div>
 );
 
+export const Field = ({ children, type, label }: IProps) => (
+  <div className="field">
+    { label ? <label>{ label }</label> : null}
+    { children }
+  </div>
+);
+
 export default Fields;

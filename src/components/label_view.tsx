@@ -21,14 +21,15 @@ interface IProps {
   horizontal?: boolean;
   floating?: boolean;
   circular?: boolean;
+  style: any;
 }
 
 
 export const Segment = ({
     classes, children, icon, image, color, detail, rightIcon, pointing, basic,
-    tag, corner, ribbon, attached, size, horizontal, floating, circular
+    tag, corner, ribbon, attached, size, horizontal, floating, circular, style
   }: IProps) => (
-  <div className={css("ui", classes, color, size,
+  <div style={style} className={css("ui", classes, color, size,
     {
       "circular": circular,
       "horizontal": horizontal,

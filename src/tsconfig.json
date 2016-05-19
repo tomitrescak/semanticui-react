@@ -32,9 +32,6 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": [
-    "node_modules"
-  ],
   "atom": {
     "rewriteTsconfig": true
   },
@@ -44,11 +41,11 @@
     "containers/intl_container.ts",
     "i18n.ts",
     "index.ts",
-    "semantic-react.d.ts",
     "stories/index.ts",
     "stories/jquery_import.ts",
     "typings/classnames/classnames.d.ts",
     "typings/jquery/jquery.d.ts",
+    "typings/node.d.ts",
     "typings/packages/jsx-controls.d.ts",
     "typings/packages/komposer.d.ts",
     "typings/packages/semantic.d.ts",
