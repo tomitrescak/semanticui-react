@@ -64,12 +64,14 @@ interface IDropdownItem {
   image?: string;
   icon?: string;
   text: string;
+  children: any;
 }
 
-export const DropdownItem = ({ value, text, image, icon }: IDropdownItem) => (
+export const DropdownItem = ({ value, text, image, icon, children }: IDropdownItem) => (
   <div className="item" data-value={value ? value : text}>
     { icon ? <i className={css(icon, "icon")}></i> : null }
     { image ? <img className="ui mini avatar image" src={image} /> : null }
     { text }
+    { children }
   </div>
 );
