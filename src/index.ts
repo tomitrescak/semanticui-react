@@ -107,7 +107,7 @@ export function init(config: any) {
     Header5 = require("./components/header_view").Header5;
   }
   if (config.Input) {
-    Input = require("./components/input_view").Input;
+    Input = require("./components/input_view").default;
   }
   if (config.Items) {
     Items = require("./views/item_view").Items;

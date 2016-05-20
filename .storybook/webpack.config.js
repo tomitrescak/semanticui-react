@@ -21,7 +21,7 @@ const config = {
         loader: 'babel',
         query: {
           presets: ['react', 'es2015', 'stage-2'],
-          plugins: ['jsx-control-statements']
+          // plugins: ['jsx-control-statements']
         },
         exclude: [path.resolve('./node_modules'), path.resolve(__dirname, 'node_modules')],
         include: [path.resolve('./'), __dirname],
@@ -33,7 +33,7 @@ const config = {
         loader: 'ts',
         query: {
           presets: ['react', 'es2015', 'stage-2'],
-          plugins: ['jsx-control-statements']
+          //plugins: ['jsx-control-statements']
         },
         exclude: [path.resolve('./node_modules'), path.resolve(__dirname, 'node_modules')],
         include: [path.resolve('./'), __dirname],
