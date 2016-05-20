@@ -1,5 +1,5 @@
 import "semantic-ui-css/components/site.css";
-import $ from "jquery";
+import * as $ from "jquery";
 
 // import jquery into global scope
 
@@ -93,7 +93,7 @@ export function init(config: any) {
   if (config.Form) {
     Form = require("./collections/form_view").default;
     Fields = require("./components/fields_view").Fields;
-    Field = require("./components/field_view").Field;
+    Field = require("./components/fields_view").Field;
   }
   if (config.Grid) {
     Grid = require("./collections/grid_view").default;
