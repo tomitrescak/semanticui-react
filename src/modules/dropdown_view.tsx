@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as css from "classnames";
 
+import "semantic-ui-css/components/label.css";
 import "semantic-ui-css/components/dropdown.css";
 import "semantic-ui-css/components/dropdown.js";
 
@@ -18,6 +19,7 @@ interface IProps {
   children?: any;
   activation: "hover" | "click";
   label: string;
+  inline: boolean;
 }
 
 export class Dropdown extends React.Component<IProps, {}> {
@@ -44,7 +46,7 @@ export class Dropdown extends React.Component<IProps, {}> {
     // we either render as field or as a separate dropdown
     if (this.props.label) {
       return (
-        <div className="field">
+        <div className={css("field", { inline: this.props.inline })}>
           <label>{ this.props.label }</label>
           { dropdown }
         </div>

@@ -14,6 +14,9 @@ interface IProps {
   inputClasses?: string;
   type?: string;
   value?: any;
+  leftLabel?: string;
+  rightLabel?: string;
+  inline?: boolean;
 }
 
 export default class  extends React.Component<IProps, {}> {
@@ -25,9 +28,15 @@ export default class  extends React.Component<IProps, {}> {
     let type = this.props.type ? this.props.type : "text";
 
     return (
-      <div className="field">
+      <div className={css("field", { inline: this.props.inline })}>
         { this.props.label ? <label>{ this.props.label }</label> : null }
-        <div className={css("ui", this.props.iconPosition, { icon: this.props.icon }, this.props.classes, "input") }>
+        <div className={css("ui",
+          this.props.iconPosition,
+          { icon: this.props.icon },
+          { right: this.props.rightLabel },
+          { labeled: this.props.leftLabel || this.props.rightLabel },
+          this.props.classes, "input") }>
+          { this.props.leftLabel ? <div className="ui label">{ this.props.leftLabel }</div> : null }
           <input
             ref="input"
             type={type}
@@ -37,6 +46,7 @@ export default class  extends React.Component<IProps, {}> {
             defaultValue={this.props.value}
           />
           { this.props.icon ? <i className={css(this.props.icon, "icon")} /> : null }
+          { this.props.rightLabel ? <div className="ui label">{ this.props.rightLabel }</div> : null }
         </div>
       </div>
     );

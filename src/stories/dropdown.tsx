@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf, action } from "@kadira/storybook";
 
-import { Dropdown, DropdownItem, DropdownButton, Menu, MenuItem } from "../index";
+import { Dropdown, DropdownItem, DropdownButton, Menu, MenuItem, Form } from "../index";
 
 storiesOf("Dropdown", module)
   .add("default view", () => {
@@ -37,18 +37,36 @@ storiesOf("Dropdown", module)
         <DropdownItem text="Third" />
       </Dropdown>
     );
+  })
+  .add("label view", () => {
+    return (
+      <Form>
+        <Dropdown classes="compact selection" activation="hover" id="test" text="Dropdown" multiple={true} label="Label" inline={true}>
+          <DropdownItem text="First" value="first" />
+          <DropdownItem text="Second" />
+          <DropdownItem text="Third" />
+        </Dropdown>
+
+        <Dropdown classes="compact selection" activation="hover" id="test" text="Dropdown" multiple={true} label="Label">
+          <DropdownItem text="First" value="first" />
+          <DropdownItem text="Second" />
+          <DropdownItem text="Third" />
+        </Dropdown>
+      </Form>
+
+    );
   });
 
 
-  storiesOf("DropdownButton", module)
-    .add("default view", () => {
-      return (
-        <DropdownButton activation="hover" id="test" icon="bug" pointing="top left">
-          <Menu>
-            <MenuItem text="Item 1" link="#" />
-            <MenuItem text="Item 2" link="#" />
-            <MenuItem text="Item 3" link="#" />
-          </Menu>
-        </DropdownButton>
-      );
-    })
+storiesOf("DropdownButton", module)
+  .add("default view", () => {
+    return (
+      <DropdownButton activation="hover" id="test" icon="bug" pointing="top left">
+        <Menu>
+          <MenuItem text="Item 1" link="#" />
+          <MenuItem text="Item 2" link="#" />
+          <MenuItem text="Item 3" link="#" />
+        </Menu>
+      </DropdownButton>
+    );
+  })

@@ -36,6 +36,15 @@ storiesOf("Input", module)
     return (
       <Form>
         <Input placeholder="My Placeholder" label="My label" />
+        <Input placeholder="My Placeholder" label="My label" inline={true} />
+      </Form>
+    );
+  })
+  .add("label d inputs", () => {
+    return (
+      <Form>
+        <Input placeholder="My Placeholder" leftLabel="My label" />
+        <Input placeholder="My Placeholder" rightLabel="My label" />
       </Form>
     );
   })
