@@ -14,6 +14,7 @@ interface IProps {
   inputClasses?: string;
   type?: string;
   value?: any;
+  defaultValue?: any;
   leftLabel?: string;
   rightLabel?: string;
   inline?: boolean;
@@ -43,7 +44,8 @@ export default class  extends React.Component<IProps, {}> {
             className={this.props.inputClasses}
             placeholder={this.props.placeholder}
             onChange={ this.props.onChange ? this.props.onChange.bind(this) : null }
-            defaultValue={this.props.value}
+            defaultValue={this.props.defaultValue}
+            value={this.props.value}
           />
           { this.props.icon ? <i className={css(this.props.icon, "icon")} /> : null }
           { this.props.rightLabel ? <div className="ui label">{ this.props.rightLabel }</div> : null }
