@@ -1,4 +1,10 @@
 import "semantic-ui-css/components/site.css";
+import $ from "jquery";
+
+// import jquery into global scope
+
+global.$ = $;
+global.jQuery = $;
 
 function check(control: string, initialiser: string) {
   return () => {
