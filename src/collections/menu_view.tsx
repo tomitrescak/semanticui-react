@@ -18,7 +18,7 @@ export const Menu = ({ classes, children, pagination, vertical, inverted, color,
     classes,
     color,
     {
-      "inveted": inverted,
+      "inverted": inverted,
       "pagination": pagination,
       "vertical": vertical
     },

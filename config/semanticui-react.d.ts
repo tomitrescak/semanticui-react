@@ -62,11 +62,12 @@ export class Grid extends React.Component<IGridProps, {}> { }
 
 // menu
 
-interface IMenuProps {
+interface IMenuProps extends IColor {
   classes?: string;
   children?: any;
   pagination?: boolean;
   vertical?: boolean;
+  inverted: boolean;
 }
 
 export class Menu extends React.Component<IMenuProps, {}> { }
@@ -514,12 +515,16 @@ export class Sidebar extends React.Component<ISidebar, {}> { }
 interface ITab {
   title: string;
   children?: any;
+  url?: string;
+  name?: string;
 }
 
 interface ITabs {
   id: string;
   children?: any;
+  activeTab?: string;
   type?: "tabs" | "buttons" | "lines";
+  linkBased?: boolean;
 }
 
 export class Tabs extends React.Component<ITabs, {}> { }
