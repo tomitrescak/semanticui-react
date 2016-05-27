@@ -23,6 +23,7 @@ interface IProps {
   inline: boolean;
   onChange: Function;
   defaultValue: any;
+  value: any;
 }
 
 export class Dropdown extends React.Component<IProps, {}> {
@@ -36,7 +37,7 @@ export class Dropdown extends React.Component<IProps, {}> {
           "multipls": this.props.multiple,
         } ,"dropdown")} id={this.props.id}
         >
-        <input type="hidden" name={this.props.id} value={this.props.defaultValue} />
+        <input type="hidden" name={this.props.id} value={this.props.value ? this.props.value : this.props.defaultValue} />
         { this.props.text ? <div className="text">{this.props.text}</div> : null }
         <i className="dropdown icon"></i>
         { this.props.defaultText ? <div className="default text">{this.props.defaultText}</div> : null }

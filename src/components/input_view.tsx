@@ -21,8 +21,12 @@ interface IProps {
 }
 
 export default class  extends React.Component<IProps, {}> {
-  value() {
+  get value() {
     return this.refs["input"]["value"];
+  }
+
+  set value(val: any) {
+    this.refs["input"]["value"] = val;
   }
 
   render() {

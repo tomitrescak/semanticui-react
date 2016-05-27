@@ -412,6 +412,9 @@ interface IDropdown extends IColors {
   children?: any;
   activation: "hover" | "click";
   label?: string;
+  onChange?: (value: string, text: string) => void;
+  value?: any;
+  defaultValue?: any;
 }
 
 export class Dropdown extends React.Component<IDropdown, {}> { }
