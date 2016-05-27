@@ -232,9 +232,15 @@ interface IInput {
   inputClasses?: string;
   type?: string;
   value?: any;
+  defaultValue?: any;
+  leftLabel?: string;
+  rightLabel?: string;
+  inline?: boolean;
 }
 
-export class Input extends React.Component<IInput, {}> { }
+export class Input extends React.Component<IInput, {}> {
+  value: any;
+}
 
 // label
 

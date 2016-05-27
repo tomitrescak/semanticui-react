@@ -22,13 +22,14 @@ export interface IButtonProps {
   disabled?: boolean;
   attached?: "left" | "right";
   active?: boolean;
+  onClick: Function;
 }
 
 
 export const Button = ({
     text, classes, color, inverted,
     icon, labeled, loading, size, circular, toggle,
-    fluid, disabled, attached, basic, active, compact
+    fluid, disabled, attached, basic, active, compact, onClick
   }: IButtonProps) => (
   <button className={
     css("ui", classes, size, attached, labeled,
@@ -48,7 +49,7 @@ export const Button = ({
       },
       toggle,
       color, "button")
-    }>
+    } onClick={onClick}>
     { icon ? <i className={css(icon, "icon")}></i> : null}
     { text }
   </button>
