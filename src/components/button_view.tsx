@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 import "semantic-ui-css/components/reset.css";
 import "semantic-ui-css/components/button.css";
@@ -22,37 +23,43 @@ export interface IButtonProps {
   disabled?: boolean;
   attached?: "left" | "right";
   active?: boolean;
-  onClick: Function;
+  onClick?: Function;
+  url?: string;
 }
+
+
 
 
 export const Button = ({
     text, classes, color, inverted,
     icon, labeled, loading, size, circular, toggle,
-    fluid, disabled, attached, basic, active, compact, onClick
-  }: IButtonProps) => (
-  <button className={
-    css("ui", classes, size, attached, labeled,
-      {
-        "compact": compact,
-        "active": active,
-        "attached": attached,
-        "labeled": labeled,
-        "inverted": inverted,
-        "icon": icon,
-        "loading": loading,
-        "circular": circular,
-        "toggle": toggle,
-        "fluid": fluid,
-        "disabled": disabled,
-        "basic": basic,
-      },
-      toggle,
-      color, "button")
-    } onClick={onClick}>
-    { icon ? <i className={css(icon, "icon")}></i> : null}
-    { text }
-  </button>
-);
+    fluid, disabled, attached, basic, active, compact, onClick, url
+  }: IButtonProps) => {
+
+    const El = url ? config.linkElement : ((props: any) => <button {...props} />);
+    return (
+      <El className={
+        css("ui", classes, size, attached, labeled,
+          {
+            "compact": compact,
+            "active": active,
+            "attached": attached,
+            "labeled": labeled,
+            "inverted": inverted,
+            "icon": icon,
+            "loading": loading,
+            "circular": circular,
+            "toggle": toggle,
+            "fluid": fluid,
+            "disabled": disabled,
+            "basic": basic,
+          },
+          toggle,
+          color, "button")
+        } onClick={onClick} href={url}>
+        { icon ? <i className={css(icon, "icon")}></i> : null}
+        { text }
+      </El>
+    )};
 
 export default Button;

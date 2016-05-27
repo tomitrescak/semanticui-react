@@ -118,7 +118,8 @@ interface IButton extends IColors, ISizes {
   disabled?: boolean;
   attached?: "left" | "right";
   active?: boolean;
-  onClick: Function;
+  onClick?: Function;
+  url?: string;
 }
 
 export class Button extends React.Component<IButton, {}> { }

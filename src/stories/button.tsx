@@ -10,6 +10,11 @@ storiesOf("Button", module)
       <Button text="Button" />
     );
   })
+  .add("link", () => {
+    return (
+      <Button text="Button" url="a/b.html" />
+    );
+  })
   .add("localised", () => {
     return (
       <ButtonIntl mid="button" text="Button" />
