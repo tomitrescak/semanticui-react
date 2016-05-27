@@ -38,16 +38,46 @@ storiesOf("Dropdown", module)
       </Dropdown>
     );
   })
+  .add("change action", () => {
+    return (
+      <Dropdown activation="hover" id="test" text="Dropdown" onChange={action("changed")}>
+        <DropdownItem text="First" value="2" />
+        <DropdownItem text="Second" value="3" />
+        <DropdownItem text="Third" value="4" />
+      </Dropdown>
+    );
+  })
+  .add("pre-selected value", () => {
+    return (
+      <Dropdown activation="hover" id="test" defaultValue={3} text="Dropdown">
+        <DropdownItem text="First" value="2" />
+        <DropdownItem text="Second" value="3" />
+        <DropdownItem text="Third" value="4" />
+      </Dropdown>
+    );
+  })
   .add("label view", () => {
     return (
       <Form>
-        <Dropdown classes="compact selection" activation="hover" id="test" text="Dropdown" multiple={true} label="Label" inline={true}>
+        <Dropdown classes="compact selection" activation="hover" id="test1" text="Dropdown"  label="Label" inline={true}>
           <DropdownItem text="First" value="first" />
           <DropdownItem text="Second" />
           <DropdownItem text="Third" />
         </Dropdown>
 
-        <Dropdown classes="compact selection" activation="hover" id="test" text="Dropdown" multiple={true} label="Label">
+        <Dropdown classes="compact selection" activation="hover" id="test2" text="Dropdown" label="Label" >
+          <DropdownItem text="First" value="first" />
+          <DropdownItem text="Second" />
+          <DropdownItem text="Third" />
+        </Dropdown>
+
+        <Dropdown classes="compact selection" activation="hover" id="test3" text="Dropdown" label="Label" >
+          <DropdownItem text="First" value="first" />
+          <DropdownItem text="Second" />
+          <DropdownItem text="Third" />
+        </Dropdown>
+
+        <Dropdown classes="compact selection" activation="hover" id="test4" text="Dropdown" label="Label Top">
           <DropdownItem text="First" value="first" />
           <DropdownItem text="Second" />
           <DropdownItem text="Third" />

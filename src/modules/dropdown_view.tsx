@@ -16,10 +16,13 @@ interface IProps {
   fluid?: boolean;
   search?: boolean;
   multiple?: boolean;
+  filtered?: boolean;
   children?: any;
   activation: "hover" | "click";
   label: string;
   inline: boolean;
+  onChange: Function;
+  defaultValue: any;
 }
 
 export class Dropdown extends React.Component<IProps, {}> {
@@ -30,10 +33,10 @@ export class Dropdown extends React.Component<IProps, {}> {
           "selection": selection,
           "fluid": this.props.fluid,
           "search": this.props.search,
+          "multipls": this.props.multiple,
         } ,"dropdown")} id={this.props.id}
-        multiple={this.props.multiple ? "Dooo" : null}
         >
-        <input type="hidden" name={this.props.id} />
+        <input type="hidden" name={this.props.id} value={this.props.defaultValue} />
         { this.props.text ? <div className="text">{this.props.text}</div> : null }
         <i className="dropdown icon"></i>
         { this.props.defaultText ? <div className="default text">{this.props.defaultText}</div> : null }
@@ -57,7 +60,16 @@ export class Dropdown extends React.Component<IProps, {}> {
   }
 
   componentDidMount() {
-    $("#" + this.props.id).dropdown({ on: this.props.activation });
+    let self = this;
+    $("#" + this.props.id).dropdown({
+      on: this.props.activation,
+      onChange: function(value: string, text: string, $selectedItem: any) {
+        if (self.props.onChange) {
+          self.props.onChange(value, $selectedItem[0].innerText);
+        }
+      }
+    });
+    // $("#" + this.props.id).dropdown('set selected', this.props.defaultValue);
   }
 }
 

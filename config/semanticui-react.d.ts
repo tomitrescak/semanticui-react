@@ -62,12 +62,13 @@ export class Grid extends React.Component<IGridProps, {}> { }
 
 // menu
 
-interface IMenuProps extends IColor {
+interface IMenuProps extends IColors {
   classes?: string;
   children?: any;
   pagination?: boolean;
   vertical?: boolean;
-  inverted: boolean;
+  inverted?: boolean;
+  position?: string;
 }
 
 export class Menu extends React.Component<IMenuProps, {}> { }
@@ -410,6 +411,7 @@ interface IDropdown extends IColors {
   multiple?: boolean;
   children?: any;
   activation: "hover" | "click";
+  label?: string;
 }
 
 export class Dropdown extends React.Component<IDropdown, {}> { }
