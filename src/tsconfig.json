@@ -38,6 +38,7 @@
   "files": [
     "actions/index.ts",
     "components/semantic_ui.ts",
+    "config/interfaces.ts",
     "containers/intl_container.ts",
     "i18n.ts",
     "index.ts",
@@ -74,6 +75,7 @@
     "components/segments_view.tsx",
     "components/site_view.tsx",
     "components/step_view.tsx",
+    "config/config.tsx",
     "modules/accordion_item_view.tsx",
     "modules/accordion_view.tsx",
     "modules/checkbox_view.tsx",

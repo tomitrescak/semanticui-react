@@ -12,6 +12,8 @@ function check(control: string, initialiser: string) {
   }
 }
 
+export { default as config } from "./config/config";
+
 let _segment: any = null;
 
 export let Accordion: any = check("Accordion", "Accordion");

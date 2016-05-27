@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 import "semantic-ui-css/components/breadcrumb.css";
 
@@ -25,6 +26,6 @@ interface IBreadcrumbProps {
 }
 
 export const Breadcrumb = ({ name, link }: IBreadcrumbProps) => (
-  <a className="section" href={link}>{name}</a>
+  <config.linkElement className="section" href={link}>{name}</config.linkElement>
 );
 export default Breadcrumbs;

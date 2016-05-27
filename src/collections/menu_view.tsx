@@ -3,19 +3,27 @@ import * as css from "classnames";
 
 import "semantic-ui-css/components/menu.css";
 
-interface IProps {
+interface IProps extends IColor {
   classes?: string;
   children?: any;
   pagination: boolean;
   vertical: boolean;
+  inverted: boolean;
+  position: "left" | "right";
 }
 
-export const Menu = ({ classes, children, pagination, vertical }: IProps) => (
-  <div className={css("ui", classes,
+export const Menu = ({ classes, children, pagination, vertical, inverted, color, position }: IProps) => (
+  <div className={css(
+    { "ui": !position },
+    classes,
+    color,
     {
+      "inveted": inverted,
       "pagination": pagination,
       "vertical": vertical
-    }, "menu")}>
+    },
+    position,
+    "menu")}>
     { children }
   </div>
 );

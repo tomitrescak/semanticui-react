@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 import "semantic-ui-css/components/icon.css";
 
@@ -13,10 +14,10 @@ export interface IProps {
 
 
 export const MenuItem = ({classes, icon, text, children, link }: IProps) => (
-  <a className={css(classes, "item") } href={link}>
+  <config.linkElement className={css(classes, "item") } href={link}>
     { icon ? <i className={css("icon", icon) }></i> : null }
     { text }
-  </a>
+  </config.linkElement>
 );
 
 export default MenuItem;

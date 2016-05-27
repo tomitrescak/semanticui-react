@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 import "semantic-ui-css/components/image.css";
 
@@ -49,9 +50,9 @@ interface IImageProps extends IProps {
 }
 
 export const ImageLink = (props: IImageProps) => (
-  <a href={props.link} className={css("ui", props.size, "image") }>
+  <config.linkElement href={props.link} className={css("ui", props.size, "image") }>
     <img className={createClass(props)} src={props.src} />
-  </a>
+  </config.linkElement>
 );
 
 export default Image;

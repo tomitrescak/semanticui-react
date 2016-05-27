@@ -3,8 +3,7 @@ import * as css from "classnames";
 
 import "semantic-ui-css/components/message.css";
 
-interface IProps {
-  color?: "warning" | "info" | "success" | "error" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
+interface IProps extends IColor {
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
   classes?: string;
   children?: any;

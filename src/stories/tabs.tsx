@@ -46,4 +46,26 @@ storiesOf("Tabs", module)
         </Tab>
       </Tabs>
     );
+  })
+  .add("custom names", () => {
+    return (
+      <Tabs id="tabs">
+        <Tab title="Tab 1" name="tab1">
+          Content 1
+        </Tab>
+        <Tab title="Tab 2" name="tab2">
+        </Tab>
+      </Tabs>
+    );
+  })
+  .add("link view", () => {
+    return (
+      <Tabs id="tabs" linkBased={true} >
+        <Tab title="Tab 1" name="tab1" url="a/tab1">
+          Content 1
+        </Tab>
+        <Tab title="Tab 2" name="tab2" url="a/tab2">
+        </Tab>
+      </Tabs>
+    );
   });
