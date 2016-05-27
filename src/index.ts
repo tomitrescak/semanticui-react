@@ -128,7 +128,7 @@ export function init(config: any) {
   }
   if (config.List) {
     List = require("./components/list_view").List;
-    Item = require("./components/list_view").ListItem;
+    ListItem = require("./components/list_view").ListItem;
   }
   if (config.Loading) {
     Loading = require("./components/loader_view").default;
