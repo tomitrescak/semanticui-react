@@ -26,6 +26,6 @@ interface IBreadcrumbProps {
 }
 
 export const Breadcrumb = ({ name, link }: IBreadcrumbProps) => (
-  <config.linkElement className="section" href={link}>{name}</config.linkElement>
+  React.createElement(config.linkElement, { className: "section", href: link }, name)
 );
 export default Breadcrumbs;

@@ -27,39 +27,37 @@ export interface IButtonProps {
   url?: string;
 }
 
-
-
-
 export const Button = ({
     text, classes, color, inverted,
     icon, labeled, loading, size, circular, toggle,
     fluid, disabled, attached, basic, active, compact, onClick, url
   }: IButtonProps) => {
 
-    const El = url ? config.linkElement : ((props: any) => <button {...props} />);
-    return (
-      <El className={
-        css("ui", classes, size, attached, labeled,
-          {
-            "compact": compact,
-            "active": active,
-            "attached": attached,
-            "labeled": labeled,
-            "inverted": inverted,
-            "icon": icon,
-            "loading": loading,
-            "circular": circular,
-            "toggle": toggle,
-            "fluid": fluid,
-            "disabled": disabled,
-            "basic": basic,
-          },
-          toggle,
-          color, "button")
-        } onClick={onClick} href={url}>
-        { icon ? <i className={css(icon, "icon")}></i> : null}
-        { text }
-      </El>
-    )};
+    const el = url ? config.linkElement : "button";
+    return React.createElement(el, {
+      className: css("ui", classes, size, attached, labeled,
+        {
+          "compact": compact,
+          "active": active,
+          "attached": attached,
+          "labeled": labeled,
+          "inverted": inverted,
+          "icon": icon,
+          "loading": loading,
+          "circular": circular,
+          "toggle": toggle,
+          "fluid": fluid,
+          "disabled": disabled,
+          "basic": basic,
+        },
+        toggle,
+        color, "button"),
+        onClick: onClick,
+        href: url
+      },
+      icon ? <i className={css(icon, "icon")}></i> : null,
+      text
+    );
+  };
 
 export default Button;

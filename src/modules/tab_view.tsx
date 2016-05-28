@@ -42,12 +42,14 @@ export class Tabs extends React.Component<IProps, {}> {
       <div className={css("ui", menuClass, "menu")} id={this.props.id}>
         { this.props.children.map((tab: { props: ITab }, index: number) => {
           return (
-            <config.linkElement
-              href={tab.props.url}
-              key={index}
-              className={css({ "active": tab.props.name && this.props.activeTab === tab.props.name || !this.props.activeTab && index === 0}, "item")}
-              data-tab={tab.props.name ? tab.props.name : (this.props.id + "-" + index)}>{tab.props.title}
-            </config.linkElement>
+            React.createElement(config.linkElement,
+              { href: tab.props.url,
+                key: index,
+                className: css({ "active": tab.props.name && this.props.activeTab === tab.props.name || !this.props.activeTab && index === 0}, "item"),
+                "data-tab": tab.props.name ? tab.props.name : (this.props.id + "-" + index)
+              },
+              tab.props.title
+            )
           );
         }) }
       </div>

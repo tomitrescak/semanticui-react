@@ -50,9 +50,9 @@ interface IImageProps extends IProps {
 }
 
 export const ImageLink = (props: IImageProps) => (
-  <config.linkElement href={props.link} className={css("ui", props.size, "image") }>
+  React.createElement(config.linkElement, { href: props.link, className: css("ui", props.size, "image") },
     <img className={createClass(props)} src={props.src} />
-  </config.linkElement>
+  )
 );
 
 export default Image;

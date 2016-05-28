@@ -1,4 +1,7 @@
 export function init(component: string): void;
+export let config: {
+  linkElement: any
+};
 
 interface IProps {
   classes?: string;
