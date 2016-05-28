@@ -10,11 +10,12 @@ export interface IProps {
   text?: string;
   children?: any;
   link: string;
+  onClick: any;
 }
 
 
-export const MenuItem = ({classes, icon, text, children, link }: IProps) => (
-  React.createElement(config.linkElement, { className: css(classes, "item"), href: link },
+export const MenuItem = ({classes, icon, text, children, link, onClick }: IProps) => (
+  React.createElement(link ? config.linkElement : "div", { className: css(classes, "item"), href: link, onClick: onClick },
     icon ? <i className={css("icon", icon) }></i> : null,
     text
   )
