@@ -76,6 +76,7 @@ export class Dropdown extends React.Component<IProps, {}> {
   componentDidUpdate(prevProps: IProps) {
     if (this.props.defaultValue !== prevProps.defaultValue) {
       $("#" + this.props.id).dropdown("restore defaults");
+      $("#" + this.props.id).dropdown("set selected", this.props.defaultValue);
     }
   }
 }
