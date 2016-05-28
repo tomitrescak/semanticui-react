@@ -65,7 +65,7 @@ export class Dropdown extends React.Component<IProps, {}> {
     $("#" + this.props.id).dropdown({
       on: this.props.activation,
       onChange: function(value: string, text: string, $selectedItem: any) {
-        if (self.props.onChange) {
+        if (self.props.onChange && $selectedItem) {
           self.props.onChange(value, $selectedItem[0].innerText);
         }
       }
