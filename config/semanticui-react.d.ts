@@ -90,7 +90,8 @@ interface IMenuItem {
   icon?: string;
   text?: string;
   children?: any;
-  link: string;
+  link?: string;
+  onClick?: Function;
 }
 
 export class MenuItem extends React.Component<IMenuItem, {}> { }
@@ -424,6 +425,7 @@ interface IDropdown extends IColors {
   activation: "hover" | "click";
   label?: string;
   onChange?: (value: string, text: string) => void;
+  onInit?: (elem: JQuery) => void;
   value?: any;
   defaultValue?: any;
 }

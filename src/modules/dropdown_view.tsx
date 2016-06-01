@@ -22,6 +22,7 @@ interface IProps {
   label: string;
   inline: boolean;
   onChange: Function;
+  onInit: Function;
   defaultValue: any;
   value: any;
 }
@@ -70,6 +71,9 @@ export class Dropdown extends React.Component<IProps, {}> {
         }
       }
     });
+    if (this.props.onInit) {
+      this.props.onInit($("#" + this.props.id));
+    }
     // $("#" + this.props.id).dropdown('set selected', this.props.defaultValue);
   }
 
