@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/transition.css";
-import "semantic-ui-css/components/transition.js";
-import "semantic-ui-css/components/accordion.js";
-import "semantic-ui-css/components/accordion.css";
+// import "semantic-ui-css/components/transition.css";
+// import "semantic-ui-css/components/transition.js";
+// import "semantic-ui-css/components/accordion.js";
+// import "semantic-ui-css/components/accordion.css";
 
 interface IProps {
   exclusive?: boolean;

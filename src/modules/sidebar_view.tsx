@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/reset.css";
-import "semantic-ui-css/components/sidebar.css";
-import "semantic-ui-css/components/sidebar.js";
+// import "semantic-ui-css/components/reset.css";
+// import "semantic-ui-css/components/sidebar.css";
+// import "semantic-ui-css/components/sidebar.js";
 
 interface IProps {
   classes?: string;

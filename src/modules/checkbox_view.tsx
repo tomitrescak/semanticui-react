@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/checkbox.css";
-import "semantic-ui-css/components/checkbox.js";
+// import "semantic-ui-css/components/checkbox.css";
+// import "semantic-ui-css/components/checkbox.js";
 
 interface ITab {
   title: string;

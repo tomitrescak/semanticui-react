@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/icon.css";
+// import "semantic-ui-css/components/icon.css";
 
 interface IProps {
   classes?: string;

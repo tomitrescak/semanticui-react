@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/progress.css";
-import "semantic-ui-css/components/progress.js";
+// import "semantic-ui-css/components/progress.css";
+// import "semantic-ui-css/components/progress.js";
 
 
 interface IProps {

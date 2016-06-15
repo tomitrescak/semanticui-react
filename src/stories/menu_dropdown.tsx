@@ -5,7 +5,7 @@ import { Menu } from "../index";
 import { MenuItem, MenuDropdown } from "../index";
 import { MenuDropdown as MenuDropdownIntl, Item as ItemIntl } from "../i18n";
 
-//import "semantic-ui-css/components/reset.css";
+//// import "semantic-ui-css/components/reset.css";
 
 storiesOf("Menu.Dropdown", module)
   .add("default view", () => {

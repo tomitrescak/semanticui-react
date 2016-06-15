@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/dimmer.css";
-import "semantic-ui-css/components/dimmer.js";
-import "semantic-ui-css/components/modal.css";
-import "semantic-ui-css/components/modal.js";
+// import "semantic-ui-css/components/dimmer.css";
+// import "semantic-ui-css/components/dimmer.js";
+// import "semantic-ui-css/components/modal.css";
+// import "semantic-ui-css/components/modal.js";
 
 
 interface IProps {

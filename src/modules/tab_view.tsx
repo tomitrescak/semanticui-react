@@ -2,9 +2,9 @@ import * as React from "react";
 import * as css from "classnames";
 import config from "../config/config";
 
-import "semantic-ui-css/components/reset.css";
-import "semantic-ui-css/components/tab.css";
-import "semantic-ui-css/components/tab.js";
+// import "semantic-ui-css/components/reset.css";
+// import "semantic-ui-css/components/tab.css";
+// import "semantic-ui-css/components/tab.js";
 
 interface ITab {
   title: string;

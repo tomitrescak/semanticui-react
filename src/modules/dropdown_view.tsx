@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/label.css";
-import "semantic-ui-css/components/dropdown.css";
-import "semantic-ui-css/components/dropdown.js";
+// import "semantic-ui-css/components/label.css";
+// import "semantic-ui-css/components/dropdown.css";
+// import "semantic-ui-css/components/dropdown.js";
 
 
 interface IProps {
