@@ -1,3 +1,7 @@
+/// <reference path="react.d.ts" />
+
+import React = __React;
+
 export function init(component: string): void;
 export let config: {
   linkElement: any
