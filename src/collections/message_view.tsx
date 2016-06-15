@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/message.css";
+// import "semantic-ui-css/components/message.css";
 
 interface IProps extends IColor {
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";

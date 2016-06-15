@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/segment.css";
+// import "semantic-ui-css/components/segment.css";
 
 interface IProps {
   classes?: string;
@@ -14,7 +14,7 @@ interface IProps {
   circular?: boolean;
   alignment?: "left" | "center" | "right";
   float?: "left" | "right";
-  style: any;
+  style?: any;
 }
 
 export const Segment = ({classes, children, attached, loading, inverted, compact, color, circular, alignment, float, style }: IProps) => (

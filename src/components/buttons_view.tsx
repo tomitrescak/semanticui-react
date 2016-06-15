@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/button.css";
+// import "semantic-ui-css/components/button.css";
 
 interface IProps {
   classes?: string;

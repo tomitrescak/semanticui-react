@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/label.css";
-import "semantic-ui-css/components/dropdown.css";
-import "semantic-ui-css/components/dropdown.js";
+// import "semantic-ui-css/components/label.css";
+// import "semantic-ui-css/components/dropdown.css";
+// import "semantic-ui-css/components/dropdown.js";
 
 
 interface IProps {
@@ -18,13 +18,13 @@ interface IProps {
   multiple?: boolean;
   filtered?: boolean;
   children?: any;
-  activation: "hover" | "click";
-  label: string;
-  inline: boolean;
-  onChange: Function;
-  onInit: Function;
-  defaultValue: any;
-  value: any;
+  activation?: "hover" | "click";
+  label?: string;
+  inline?: boolean;
+  onChange?: Function;
+  onInit?: Function;
+  defaultValue?: any;
+  value?: any;
 }
 
 export class Dropdown extends React.Component<IProps, {}> {
@@ -89,8 +89,8 @@ interface IDropdownItem {
   value?: string;
   image?: string;
   icon?: string;
-  text: string;
-  children: any;
+  text?: string;
+  children?: any;
 }
 
 export const DropdownItem = ({ value, text, image, icon, children }: IDropdownItem) => (

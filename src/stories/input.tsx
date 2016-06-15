@@ -4,7 +4,7 @@ import { storiesOf, action } from "@kadira/storybook";
 import { Form } from "../index";
 import { Input } from "../index";
 
-//import "semantic-ui-css/components/reset.css";
+//// import "semantic-ui-css/components/reset.css";
 
 function checkRef(refName: string) {
   return action("refs", this.refs[refName]["value"]);

@@ -2,7 +2,7 @@ import * as React from "react";
 import * as css from "classnames";
 import config from "../config/config";
 
-import "semantic-ui-css/components/image.css";
+// import "semantic-ui-css/components/image.css";
 
 interface IProps {
   classes?: string;

@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as css from "classnames";
 
-import "semantic-ui-css/components/rating.css";
-import "semantic-ui-css/components/rating.js";
+// import "semantic-ui-css/components/rating.css";
+// import "semantic-ui-css/components/rating.js";
 
 
 interface IProps {
