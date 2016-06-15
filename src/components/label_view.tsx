@@ -21,7 +21,7 @@ interface IProps {
   horizontal?: boolean;
   floating?: boolean;
   circular?: boolean;
-  style: any;
+  style?: any;
 }
 
 

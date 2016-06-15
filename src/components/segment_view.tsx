@@ -14,7 +14,7 @@ interface IProps {
   circular?: boolean;
   alignment?: "left" | "center" | "right";
   float?: "left" | "right";
-  style: any;
+  style?: any;
 }
 
 export const Segment = ({classes, children, attached, loading, inverted, compact, color, circular, alignment, float, style }: IProps) => (

@@ -6,10 +6,10 @@ import * as css from "classnames";
 interface IProps extends IColor {
   classes?: string;
   children?: any;
-  pagination: boolean;
-  vertical: boolean;
-  inverted: boolean;
-  position: "left" | "right";
+  pagination?: boolean;
+  vertical?: boolean;
+  inverted?: boolean;
+  position?: "left" | "right";
 }
 
 export const Menu = ({ classes, children, pagination, vertical, inverted, color, position }: IProps) => (

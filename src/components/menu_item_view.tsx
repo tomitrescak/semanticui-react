@@ -9,8 +9,8 @@ export interface IProps {
   icon?: string;
   text?: string;
   children?: any;
-  link: string;
-  onClick: any;
+  link?: string;
+  onClick?: any;
 }
 
 
