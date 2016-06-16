@@ -30,6 +30,7 @@ export { default as Search} from "./modules/search_view";
 export { Steps, Step } from "./components/step_view";
 export { Tab, default as Tabs} from "./modules/tab_view";
 
+export { default as config } from "./config/config";
 
 // // import "semantic-ui-css/components/site.css";
 // import * as $ from "jquery";
@@ -45,7 +46,6 @@ export { Tab, default as Tabs} from "./modules/tab_view";
 //   }
 // }
 //
-// export { default as config } from "./config/config";
 //
 // let _segment: any = null;
 //
