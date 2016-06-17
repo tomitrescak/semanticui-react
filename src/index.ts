@@ -29,6 +29,7 @@ export { default as Segment} from "./components/segment_view";
 export { default as Search} from "./modules/search_view";
 export { Steps, Step } from "./components/step_view";
 export { Tab, default as Tabs} from "./modules/tab_view";
+export { default as Text} from "./components/text_view";
 
 export { default as config } from "./config/config";
 

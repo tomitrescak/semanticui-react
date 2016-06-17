@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/checkbox.css";
 // import "semantic-ui-css/components/checkbox.js";
@@ -33,7 +34,7 @@ export const Checkbox = ({children, id, name, classes, text, checked, disabled, 
         "fitted": fitted
       }, "checkbox")}>
       <input type="checkbox" name={ name ? name : id} defaultChecked={checked} />
-      <label htmlFor={id}>{text}</label>
+      <label htmlFor={id}>{config.i18n(text)}</label>
     </div>
   </div>
 );

@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/comment.css";
 
@@ -22,7 +23,7 @@ export const Comments = ({classes, children, header, id, text, handler}: IProps)
         <textarea id={id} />
       </div>
       <div className="ui blue labeled submit icon button" onClick={handler.bind(this)}>
-        <i className="icon edit" /> { text }
+        <i className="icon edit" /> { config.i18n(text) }
       </div>
     </form>
 
@@ -61,7 +62,7 @@ export const Comment = ({ children, image, date, author, actions }: IItemProps) 
         <div className="actions">
           {
             actions.map((action: IAction, index: number) => {
-              return <a onClick={action.handler.bind(this)}>{ action.name}</a>;
+              return <a onClick={action.handler.bind(this)}>{ config.i18n(action.name) }</a>;
             })
           }
         </div> : null

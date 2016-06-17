@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/label.css";
 // import "semantic-ui-css/components/dropdown.css";
@@ -35,13 +36,13 @@ export class Dropdown extends React.Component<IProps, {}> {
           "selection": selection,
           "fluid": this.props.fluid,
           "search": this.props.search,
-          "multipls": this.props.multiple,
+          "multiple": this.props.multiple,
         } ,"dropdown")} id={this.props.id}
         >
         <input type="hidden" name={this.props.id} value={this.props.value ? this.props.value : this.props.defaultValue} />
-        { this.props.text ? <div className="text">{this.props.text}</div> : null }
+        { this.props.text ? <div className="text">{config.i18n(this.props.text)}</div> : null }
         <i className="dropdown icon"></i>
-        { this.props.defaultText ? <div className="default text">{this.props.defaultText}</div> : null }
+        { this.props.defaultText ? <div className="default text">{config.i18n(this.props.defaultText)}</div> : null }
         <div className="menu">
           { this.props.children }
         </div>
@@ -52,7 +53,7 @@ export class Dropdown extends React.Component<IProps, {}> {
     if (this.props.label) {
       return (
         <div className={css("field", { inline: this.props.inline })}>
-          <label>{ this.props.label }</label>
+          <label>{ config.i18n(this.props.label) }</label>
           { dropdown }
         </div>
       );
@@ -86,18 +87,20 @@ export class Dropdown extends React.Component<IProps, {}> {
 }
 
 interface IDropdownItem {
-  value?: string;
+  value: string;
   image?: string;
   icon?: string;
   text?: string;
+  i18text?: string;
   children?: any;
 }
 
-export const DropdownItem = ({ value, text, image, icon, children }: IDropdownItem) => (
-  <div className="item" data-value={value ? value : text}>
+export const DropdownItem = ({ value, text, image, icon, children, i18text }: IDropdownItem) => (
+  <div className="item" data-value={value}>
     { icon ? <i className={css(icon, "icon")}></i> : null }
     { image ? <img className="ui mini avatar image" src={image} /> : null }
     { text }
+    { config.i18n(i18text) }
     { children }
   </div>
 );

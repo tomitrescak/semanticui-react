@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/input.css";
 
@@ -34,7 +35,7 @@ export default class  extends React.Component<IProps, {}> {
 
     return (
       <div className={css("field", { inline: this.props.inline })}>
-        { this.props.label ? <label>{ this.props.label }</label> : null }
+        { this.props.label ? <label>{ config.i18n(this.props.label) }</label> : null }
         <div className={css("ui",
           this.props.iconPosition,
           { icon: this.props.icon },
@@ -46,13 +47,13 @@ export default class  extends React.Component<IProps, {}> {
             ref="input"
             type={type}
             className={this.props.inputClasses}
-            placeholder={this.props.placeholder}
+            placeholder={config.i18n(this.props.placeholder)}
             onChange={ this.props.onChange ? this.props.onChange.bind(this) : null }
             defaultValue={this.props.defaultValue}
             value={this.props.value}
           />
           { this.props.icon ? <i className={css(this.props.icon, "icon")} /> : null }
-          { this.props.rightLabel ? <div className="ui label">{ this.props.rightLabel }</div> : null }
+          { this.props.rightLabel ? <div className="ui label">{ config.i18n(this.props.rightLabel) }</div> : null }
         </div>
       </div>
     );

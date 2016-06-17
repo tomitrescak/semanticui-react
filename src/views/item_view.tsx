@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/item.css";
 
@@ -43,11 +44,11 @@ export const Item = ({ image, header, imageSize, link, children, meta, alignment
     }
     { icon ? <i className={css(icon, "icon")} /> : null }
     <div className={css(alignment, "content")}>
-      { header ? <a className="header" link={link}>{ header }</a> : null }
+      { header ? <a className="header" link={link}>{ config.i18n(header) }</a> : null }
       { meta ?
         <div className="meta">
           { meta.map((met: IMeta, index: number) => {
-            return <span class={met.name}>{ met.description ? met.description : met.name }</span>;
+            return <span class={met.name}>{ met.description ? config.i18n(met.description) : config.i18n(met.name) }</span>;
           })}
         </div>
         : null }

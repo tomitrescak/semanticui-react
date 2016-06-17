@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
-
+import config from "../config/config";
 // import "semantic-ui-css/components/label.css";
 
 interface IProps {
@@ -22,12 +22,13 @@ interface IProps {
   floating?: boolean;
   circular?: boolean;
   style?: any;
+  text?: string;
 }
 
 
 export const Segment = ({
     classes, children, icon, image, color, detail, rightIcon, pointing, basic,
-    tag, corner, ribbon, attached, size, horizontal, floating, circular, style
+    tag, corner, ribbon, attached, size, horizontal, floating, circular, style, text
   }: IProps) => (
   <div style={style} className={css("ui", classes, color, size,
     {
@@ -53,6 +54,7 @@ export const Segment = ({
     { icon ? <i className={css(icon, "icon") }></i> : null}
     { image ? <img src={image}/> : null }
     { children }
+    { config.i18n(text) }
     { detail ? <div className="detail">{detail}</div> : null}
     { rightIcon ? <i className={css(rightIcon, "icon") }></i> : null}
   </div>

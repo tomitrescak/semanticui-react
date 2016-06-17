@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/message.css";
 
@@ -18,8 +19,9 @@ export const Menu = ({ classes, children, header, color, size, icon, attached, c
     { icon ? <i className={css(icon, "icon") }></i> : null }
     <div class="content">
       { header ? <div className="header">
-        { header }
-      </div> : null }
+                  { config.i18n(header) }
+                 </div>
+               : null }
       { children }
     </div>
   </div>

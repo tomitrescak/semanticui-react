@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/header.css";
 
@@ -17,6 +18,7 @@ interface IProps {
   block?: boolean;
   color?: "success" | "failure" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
   inverted?: boolean;
+  text?: string;
 }
 
 function createClass(params: IProps) {
@@ -67,13 +69,14 @@ export const Header5 = (props: IProps) => (
   </h5>
 );
 
-export const HeaderContent = ({ sub, children, icon, circular, image }: IProps) => (
+export const HeaderContent = ({ sub, children, icon, circular, image, text }: IProps) => (
   <div>
     { image ? <img src={image} /> : null }
     { icon ? <i className={css({"circular": circular }, icon, "icon")}></i> : null }
     <div className="content">
       { children }
-      { sub ? <div className="sub header">{ sub }</div> : null }
+      { config.i18n(text) }
+      { sub ? <div className="sub header">{ config.i18n(sub) }</div> : null }
     </div>
   </div>
 );

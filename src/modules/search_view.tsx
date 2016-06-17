@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/input.css";
 // import "semantic-ui-css/components/search.css";
@@ -28,7 +29,7 @@ export default class Search extends React.Component<IProps, {}> {
           "category": this.props.category
         },"search")}>
         <div className="ui icon input">
-          <input className="prompt" type="text" placeholder={this.props.text} />
+          <input className="prompt" type="text" placeholder={config.i18n(this.props.text)} />
           <i className="search icon"></i>
         </div>
         <div className="results"></div>

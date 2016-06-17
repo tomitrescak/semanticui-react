@@ -8,7 +8,7 @@ storiesOf("Dropdown", module)
     return (
       <Dropdown activation="hover" id="test" defaultText="Dropdown">
         <DropdownItem text="First" value="first" />
-        <DropdownItem text="Second" />
+        <DropdownItem text="Second" value="second" />
       </Dropdown>
     );
   })
@@ -16,7 +16,7 @@ storiesOf("Dropdown", module)
     return (
       <Dropdown activation="hover" id="test" text="Dropdown" selection={false}>
         <DropdownItem text="First" value="first" />
-        <DropdownItem text="Second" />
+        <DropdownItem text="Second" value="second" />
       </Dropdown>
     );
   })
@@ -24,8 +24,8 @@ storiesOf("Dropdown", module)
     return (
       <Dropdown activation="hover" id="test" text="Dropdown" search={true}>
         <DropdownItem text="First" value="first" />
-        <DropdownItem text="Second" />
-        <DropdownItem text="Third" />
+        <DropdownItem text="Second" value="second" />
+        <DropdownItem text="Third" value="third" />
       </Dropdown>
     );
   })
@@ -33,8 +33,8 @@ storiesOf("Dropdown", module)
     return (
       <Dropdown activation="hover" id="test" text="Dropdown" multiple={true}>
         <DropdownItem text="First" value="first" />
-        <DropdownItem text="Second" />
-        <DropdownItem text="Third" />
+        <DropdownItem text="Second" value="second" />
+        <DropdownItem text="Third" value="third" />
       </Dropdown>
     );
   })
@@ -61,26 +61,26 @@ storiesOf("Dropdown", module)
       <Form>
         <Dropdown classes="compact selection" activation="hover" id="test1" text="Dropdown"  label="Label" inline={true}>
           <DropdownItem text="First" value="first" />
-          <DropdownItem text="Second" />
-          <DropdownItem text="Third" />
+          <DropdownItem text="Second" value="second" />
+          <DropdownItem text="Third" value="third" />
         </Dropdown>
 
         <Dropdown classes="compact selection" activation="hover" id="test2" text="Dropdown" label="Label" >
           <DropdownItem text="First" value="first" />
-          <DropdownItem text="Second" />
-          <DropdownItem text="Third" />
+          <DropdownItem text="Second" value="second" />
+          <DropdownItem text="Third" value="third" />
         </Dropdown>
 
         <Dropdown classes="compact selection" activation="hover" id="test3" text="Dropdown" label="Label" >
           <DropdownItem text="First" value="first" />
-          <DropdownItem text="Second" />
-          <DropdownItem text="Third" />
+          <DropdownItem text="Second" value="first" />
+          <DropdownItem text="Third" value="third" />
         </Dropdown>
 
         <Dropdown classes="compact selection" activation="hover" id="test4" text="Dropdown" label="Label Top">
           <DropdownItem text="First" value="first" />
-          <DropdownItem text="Second" />
-          <DropdownItem text="Third" />
+          <DropdownItem text="Second" value="first" />
+          <DropdownItem text="Third" value="third" />
         </Dropdown>
       </Form>
 
@@ -99,4 +99,4 @@ storiesOf("DropdownButton", module)
         </Menu>
       </DropdownButton>
     );
-  })
+  });

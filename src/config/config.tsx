@@ -1,5 +1,6 @@
 import * as React from "react";
 
 export default {
-  linkElement: "a"
-}
+  linkElement: "a",
+  i18n: (key: string) => key
+};

@@ -56,7 +56,7 @@ export const Button = ({
         href: url
       },
       icon ? <i className={css(icon, "icon")}></i> : null,
-      text
+      config.i18n(text)
     );
   };
 

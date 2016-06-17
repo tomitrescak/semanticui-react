@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 interface IProps {
   children?: any;
@@ -29,7 +30,7 @@ export const Item = ({children, title, active}: IProps) => (
   <div className="item">
     <div className={css({ "active": active }, "title") }>
       <i className="dropdown icon"></i>
-      { title }
+      { config.i18n(title) }
     </div>
     <div className={css({ "active": active }, "content") }>
       { children }

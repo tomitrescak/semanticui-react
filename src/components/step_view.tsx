@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/step.css";
 
@@ -11,9 +12,10 @@ interface IProps {
   fluid?: boolean;
   stackable?: boolean;
   attached?: "top" | "bottom";
+  text?: string;
 }
 
-export const Steps = ({classes, children, ordered, vertical, fluid, stackable, attached}: IProps) => (
+export const Steps = ({classes, children, ordered, vertical, fluid, stackable, attached, text }: IProps) => (
   <div className={css("ui", classes,
     {
       "ordered": ordered,
@@ -27,6 +29,7 @@ export const Steps = ({classes, children, ordered, vertical, fluid, stackable, a
     },
     "steps")}>
     { children }
+    { config.i18n(text) }
   </div>
 );
 

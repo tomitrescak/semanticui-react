@@ -48,7 +48,7 @@ export class Tabs extends React.Component<IProps, {}> {
                 className: css({ "active": tab.props.name && this.props.activeTab === tab.props.name || !this.props.activeTab && index === 0}, "item"),
                 "data-tab": tab.props.name ? tab.props.name : (this.props.id + "-" + index)
               },
-              tab.props.title
+              config.i18n(tab.props.title)
             )
           );
         }) }
