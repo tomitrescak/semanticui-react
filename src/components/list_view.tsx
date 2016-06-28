@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/list.css";
 
@@ -14,18 +15,20 @@ interface IProps {
   selection?: boolean;
   animated?: boolean;
   inverted?: boolean;
+  link?: boolean;
   align?: "middle" | "top" | "bottom",
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
 }
 
 export const List = ({
   classes, children, divided, bulleted, ordered, celled, relaxed, selection,
-  align, size, animated, inverted
+  align, size, animated, inverted, link
 }: IProps) => (
     <div className={css("ui", classes, size,
       {
         "inverted": inverted,
         "animated": animated,
+        "link": link,
         "divided": divided,
         "bulleted": bulleted,
         "ordered": ordered,
@@ -49,21 +52,21 @@ interface IListItemProps {
   image?: string;
   float?: "right" | "left";
   bullet?: string;
+  link?: string;
+  onClick?: Function;
+  text?: string;
 }
 
-export const ListItem = ({ children, icon, image, float, bullet }: IListItemProps) => (
-  <div className="item" data-value={bullet}>
-    { float ?
-      <div className={css(float, "floated content") }>
-        { children[1]}
-      </div>
-      : null }
-
-    { icon ? <i className={css(icon, "icon") }></i> : null }
-    { image ? <img src={image}  /> : null }
-
-    <div className="content">
-      { float ? children[0] : children }
-    </div>
-  </div>
+export const ListItem = ({ children, icon, image, float, bullet, classes, link, onClick, text }: IListItemProps) => (
+  React.createElement(link ? config.linkElement : "div", { className: css(classes, "item"), href: link, onClick: onClick, "data-value": bullet },
+    float && <div className={css(float, "floated content") }>
+              { children[1]}
+            </div>,
+    icon && <i className={css(icon, "icon") }></i>,
+    image && <img src={image}  />,
+    children && <div className="content">
+                  { float ? children[0] : children }
+                </div>,
+    config.i18n(text)
+  )
 );

@@ -15,6 +15,7 @@ export interface IButtonProps {
   compact?: boolean;
   icon?: string;
   labeled?: "left" | "right";
+  floated?: "left" | "right";
   loading?: boolean;
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
   circular?: boolean;
@@ -25,22 +26,32 @@ export interface IButtonProps {
   active?: boolean;
   onClick?: Function;
   url?: string;
+  children: any;
+  target?: string;
 }
 
 export const Button = ({
-    text, classes, color, inverted,
+    text, classes, color, inverted, floated, target,
     icon, labeled, loading, size, circular, toggle,
-    fluid, disabled, attached, basic, active, compact, onClick, url
+    fluid, disabled, attached, basic, active, compact, onClick, url, children
   }: IButtonProps) => {
 
     const el = url ? config.linkElement : "button";
     return React.createElement(el, {
-      className: css("ui", classes, size, attached, labeled,
+      target: target,
+      className: css("ui", classes, size, attached,
+        labeled,
+        {
+          "labeled": labeled,
+        },
+        floated,
+        {
+          "floated": floated
+        },
         {
           "compact": compact,
           "active": active,
           "attached": attached,
-          "labeled": labeled,
           "inverted": inverted,
           "icon": icon,
           "loading": loading,
@@ -53,10 +64,12 @@ export const Button = ({
         toggle,
         color, "button"),
         onClick: onClick,
-        href: url
+        href: url,
+        to: url,
       },
       icon ? <i className={css(icon, "icon")}></i> : null,
-      config.i18n(text)
+      text && config.i18n(text),
+      children
     );
   };
 

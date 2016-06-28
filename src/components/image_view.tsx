@@ -21,7 +21,7 @@ interface IProps {
 }
 
 function createClass(c: IProps) {
-  return css("ui", c.size, {
+  return css("ui", c.size, c.classes, {
     "avatar": c.avatar,
     "bordered": c.bordered,
     "fluid": c.fluid,
@@ -50,7 +50,7 @@ interface IImageProps extends IProps {
 }
 
 export const ImageLink = (props: IImageProps) => (
-  React.createElement(config.linkElement, { href: props.link, className: css("ui", props.size, "image") },
+  React.createElement(config.linkElement, { href: props.link, className: css("ui", props.size, props.classes, "image") },
     <img className={createClass(props)} src={props.src} />
   )
 );

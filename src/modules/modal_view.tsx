@@ -14,6 +14,7 @@ interface IProps {
   header?: string;
   children?: any;
   image?: boolean;
+  small?: boolean;
   approveAction?: Function;
   neutralAction?: Function;
   cancelAction?: Function;
@@ -23,8 +24,8 @@ interface IProps {
 }
 
 export const Modal = ({ id, header, children, image,
-    approveAction, neutralAction, cancelAction, approveText, neutralText, cancelText }: IProps) => (
-  <div className="ui modal" id={id}>
+    approveAction, neutralAction, cancelAction, approveText, neutralText, cancelText, small }: IProps) => (
+  <div className={css("ui", { small: small }, "modal")} id={id}>
     { header ? <div className="header">{ config.i18n(header) }</div> : null }
     { header ? <div className={css({"image": image}, "content")}>{ children }</div> : null }
     { !header ? children : null }

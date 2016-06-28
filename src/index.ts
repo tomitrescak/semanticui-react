@@ -1,5 +1,6 @@
 export { default as Accordion} from "./modules/accordion_view";
 export { default as AccordionItem} from "./modules/accordion_item_view";
+export { Breadcrumb, Breadcrumbs} from "./collections/breadcrumb_view";
 export { default as Button } from "./components/button_view";
 export { default as Buttons} from "./components/buttons_view";
 export { Checkbox, Radio } from "./modules/checkbox_view";
@@ -15,7 +16,10 @@ export { default as Grid} from "./collections/grid_view";
 export { Header1, Header2, Header3, Header4, Header5 } from "./components/header_view";
 export { default as Input} from "./components/input_view";
 export { Items, Item } from "./views/item_view";
+export { Image, ImageLink } from "./components/image_view";
+export { default as Jumbo} from "./components/jumbo_view";
 export { default as Label } from "./components/label_view";
+export { default as Link } from "./components/link_view";
 export { default as MenuItem } from "./components/menu_item_view";
 export { default as Message } from "./collections/message_view";
 export { List, ListItem } from "./components/list_view";

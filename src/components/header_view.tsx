@@ -39,44 +39,28 @@ function createClass(params: IProps) {
     "header");
 }
 
-export const Header1 = (props: IProps) => (
-  <h1 className={createClass(props)}>
-   <HeaderContent {...props} />
-  </h1>
-);
+export const Header1 = (props: IProps) => HeaderContent("h1", props);
 
-export const Header2 = (props: IProps) => (
-  <h2 className={createClass(props)}>
-   <HeaderContent {...props} />
-  </h2>
-);
+export const Header2 = (props: IProps) => HeaderContent("h2", props);
 
-export const Header3 = (props: IProps) => (
-  <h3 className={createClass(props)}>
-   <HeaderContent {...props} />
-  </h3>
-);
+export const Header3 = (props: IProps) => HeaderContent("h3", props);
 
-export const Header4 = (props: IProps) => (
-  <h4 className={createClass(props)}>
-   <HeaderContent {...props} />
-  </h4>
-);
+export const Header4 = (props: IProps) => HeaderContent("h4", props);
 
-export const Header5 = (props: IProps) => (
-  <h5 className={createClass(props)}>
-   <HeaderContent {...props} />
-  </h5>
-);
+export const Header5 = (props: IProps) => HeaderContent("h5", props);
 
-export const HeaderContent = ({ sub, children, icon, circular, image, text }: IProps) => (
-  <div>
-    { image ? <img src={image} /> : null }
-    { icon ? <i className={css({"circular": circular }, icon, "icon")}></i> : null }
-    <div className="content">
-      { children }
-      { config.i18n(text) }
-      { sub ? <div className="sub header">{ config.i18n(sub) }</div> : null }
-    </div>
-  </div>
-);
+export const HeaderContent = (headerSize: string, props: IProps) => {
+  const { sub, children, icon, circular, image, text } = props;
+
+  return (
+    React.createElement(headerSize, { className: createClass(props) },
+      image && <img className="ui image" src={image} /> ,
+      icon && <i className={css({ "circular": circular }, icon, "icon") }></i> ,
+      <div className="content">
+        { children }
+        { text && config.i18n(text) }
+        { sub && <div className="sub header">{ config.i18n(sub) }</div> }
+      </div>
+    )
+  );
+};

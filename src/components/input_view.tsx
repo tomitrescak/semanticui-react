@@ -19,6 +19,7 @@ interface IProps {
   leftLabel?: string;
   rightLabel?: string;
   inline?: boolean;
+  search?: boolean;
 }
 
 export default class  extends React.Component<IProps, {}> {
@@ -41,6 +42,7 @@ export default class  extends React.Component<IProps, {}> {
           { icon: this.props.icon },
           { right: this.props.rightLabel },
           { labeled: this.props.leftLabel || this.props.rightLabel },
+          { search: this.props.search },
           this.props.classes, "input") }>
           { this.props.leftLabel ? <div className="ui label">{ this.props.leftLabel }</div> : null }
           <input

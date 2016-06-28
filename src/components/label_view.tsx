@@ -23,41 +23,48 @@ interface IProps {
   circular?: boolean;
   style?: any;
   text?: string;
+  link?: string;
+  onClick?: Function;
 }
 
 
-export const Segment = ({
-    classes, children, icon, image, color, detail, rightIcon, pointing, basic,
-    tag, corner, ribbon, attached, size, horizontal, floating, circular, style, text
-  }: IProps) => (
-  <div style={style} className={css("ui", classes, color, size,
-    {
-      "circular": circular,
-      "horizontal": horizontal,
-      "floating": floating,
-      "tag": tag,
-      "ribbon": ribbon,
-      "basic": basic,
-      "image": image,
-      "pointing": pointing,
-    },
-    pointing,
-    attached,
-    {
-      "attached": attached
-    },
-    corner,
-    {
-      "corner": corner
-    },
-    "label") }>
-    { icon ? <i className={css(icon, "icon") }></i> : null}
-    { image ? <img src={image}/> : null }
-    { children }
-    { config.i18n(text) }
-    { detail ? <div className="detail">{detail}</div> : null}
-    { rightIcon ? <i className={css(rightIcon, "icon") }></i> : null}
-  </div>
-);
+export const Label = ({
+  classes, children, icon, image, color, detail, rightIcon, pointing, basic,
+  tag, corner, ribbon, attached, size, horizontal, floating, circular, style, text,
+  onClick, link
+}: IProps) => (
+    React.createElement(link ? config.linkElement : "div",
+      {
+        style,
+        onClick,
+        className: css("ui", classes, color, size,
+          {
+            "circular": circular,
+            "horizontal": horizontal,
+            "floating": floating,
+            "tag": tag,
+            "ribbon": ribbon,
+            "basic": basic,
+            "image": image,
+            "pointing": pointing,
+          },
+          pointing,
+          attached,
+          {
+            "attached": attached
+          },
+          corner,
+          {
+            "corner": corner
+          },
+          "label")
+      },
+      icon && <i className={css(icon, "icon") }></i>,
+      image && <img src={image}/>,
+      children,
+      text && config.i18n(text),
+      detail && <div className="detail">{detail}</div>,
+      rightIcon && <i className={css(rightIcon, "icon") }></i>)
+  );
 
-export default Segment;
+export default Label;

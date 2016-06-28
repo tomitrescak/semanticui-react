@@ -91,16 +91,14 @@ interface IDropdownItem {
   image?: string;
   icon?: string;
   text?: string;
-  i18text?: string;
   children?: any;
 }
 
-export const DropdownItem = ({ value, text, image, icon, children, i18text }: IDropdownItem) => (
+export const DropdownItem = ({ value, text, image, icon, children }: IDropdownItem) => (
   <div className="item" data-value={value}>
     { icon ? <i className={css(icon, "icon")}></i> : null }
     { image ? <img className="ui mini avatar image" src={image} /> : null }
-    { text }
-    { config.i18n(i18text) }
+    { text && config.i18n(text) }
     { children }
   </div>
 );
