@@ -28,17 +28,21 @@ export interface IButtonProps {
   url?: string;
   children: any;
   target?: string;
+  step?: string;
+  style?: any;
 }
 
 export const Button = ({
     text, classes, color, inverted, floated, target,
-    icon, labeled, loading, size, circular, toggle,
+    icon, labeled, loading, size, circular, toggle, step, style,
     fluid, disabled, attached, basic, active, compact, onClick, url, children
   }: IButtonProps) => {
 
     const el = url ? config.linkElement : "button";
     return React.createElement(el, {
       target: target,
+      step: step,
+      style,
       className: css("ui", classes, size, attached,
         labeled,
         {

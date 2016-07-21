@@ -12,19 +12,19 @@ interface IProps {
   activation: "hover" | "click";
   pointing?: string;
   labeled?: boolean;
+  color?: IColor;
+  compact: boolean;
 }
 
 export default class DropdownButton extends React.Component<IProps, {}> {
   render() {
     return (
-      <div style={{padding: 100}}>
-        <div className={css("ui", this.props.classes,
-            { "labeled": this.props.labeled,
-              "icon": this.props.icon }, this.props.pointing, "pointing dropdown button")}
-             id={this.props.id}>
-          { this.props.icon ? <i className={css(this.props.icon, "icon")}></i> : null }
-          { this.props.children }
-        </div>
+      <div className={css("ui", this.props.classes, this.props.color,
+          { "labeled": this.props.labeled, "compact": this.props.compact,
+            "icon": this.props.icon }, this.props.pointing, "pointing dropdown button")}
+           id={this.props.id}>
+        { this.props.icon ? <i className={css(this.props.icon, "icon")}></i> : null }
+        { this.props.children }
       </div>
     );
   }

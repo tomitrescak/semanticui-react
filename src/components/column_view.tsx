@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as css from "classnames";
 
-const names = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+const names = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen"];
 
 interface IProps {
   classes?: string;

@@ -1,22 +1,33 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
-interface IProps {
+const names = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen"];
+
+interface IFieldsProps {
   children?: any;
   type: "inline" | "grouped";
-  label?: string;
 }
 
-export const Fields = ({ children, type, label }: IProps) => (
+export const Fields = ({ children, type }: IFieldsProps) => (
   <div className={css(type, "fields")}>
-    { label ? <label>{ label }</label> : null}
     { children }
   </div>
 );
 
-export const Field = ({ children, type, label }: IProps) => (
-  <div className="field">
-    { label ? <label>{ label }</label> : null}
+interface IFieldProps {
+  children?: any;
+  type: "inline" | "grouped";
+  text?: string;
+  label?: string;
+  width: number;
+  style?: any;
+}
+
+export const Field = ({ children, type, label, text, width, style }: IFieldProps) => (
+  <div className={css(names[width], { "wide": width }, "field")} style={style}>
+    { text && <label>{ config.i18n(text) }</label> }
+    { label && <label>{ label }</label> }
     { children }
   </div>
 );
