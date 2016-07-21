@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as css from "classnames";
+import config from "../config/config";
 
 // import "semantic-ui-css/components/feed.css";
 
@@ -26,15 +27,17 @@ interface IItemProps {
   children?: any;
   likes?: string;
   extraImages?: ILinkImage[];
+  text?: string;
 }
 
-export const FeedItem = ({ children, image, date, extraImages, likes }: IItemProps) => (
+export const FeedItem = ({ children, image, date, extraImages, likes, text }: IItemProps) => (
   <div className="event">
     <div className="label">
       <img src={ image } />
     </div>
     <div className="content">
       <div className="summary">
+        { text && config.i18n(text) }
         { children && children.length ? children[0] : children }
         <div className="date">
           { date }
