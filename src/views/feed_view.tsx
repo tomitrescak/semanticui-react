@@ -11,8 +11,8 @@ interface IProps {
 }
 
 export const Feed = ({classes, children, size}: IProps) => (
-  <div className={css("ui", size, "feed") }>
-    { children }
+  <div className={css("ui", size, "feed")}>
+    {children}
   </div>
 );
 
@@ -27,39 +27,42 @@ interface IItemProps {
   children?: any;
   likes?: string;
   extraImages?: ILinkImage[];
+  extraText?: string;
   text?: string;
+  summary?: string;
 }
 
-export const FeedItem = ({ children, image, date, extraImages, likes, text }: IItemProps) => (
+export const FeedItem = ({ children, image, date, extraImages, likes, text, extraText, summary }: IItemProps) => (
   <div className="event">
     <div className="label">
-      <img src={ image } />
+      <img src={image} />
     </div>
     <div className="content">
       <div className="summary">
-        { text && config.i18n(text) }
-        { children && children.length ? children[0] : children }
+        {text && config.i18n(text)}
+        {summary}
+        {children}
         <div className="date">
-          { date }
+          {date}
         </div>
       </div>
-      { extraImages ?
+      {extraImages &&
         <div className="extra images">
-          { extraImages.map((img: ILinkImage, index: number) => {
+          {extraImages.map((img: ILinkImage, index: number) => {
             return <a href={img.link}><img src={img.src} /></a>;
-          }) }
-        </div> : null
+          })}
+        </div>
       }
-      { children && children.length > 1 ?
+      {extraText &&
         <div className="extra text">
-          { children[1]}
-        </div> : null }
-      { likes ?
+          extraText
+        </div>}
+      {likes ?
         <div className="meta">
           <a className="like">
-            <i className="like icon" /> { likes }
+            <i className="like icon" /> {likes}
           </a>
-        </div> : null }
+        </div> : null}
     </div>
   </div>
 );
