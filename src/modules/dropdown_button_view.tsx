@@ -13,7 +13,7 @@ interface IProps {
   pointing?: string;
   labeled?: boolean;
   color?: IColor;
-  compact: boolean;
+  compact?: boolean;
 }
 
 export default class DropdownButton extends React.Component<IProps, {}> {

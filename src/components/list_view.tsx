@@ -52,13 +52,13 @@ interface IListItemProps {
   image?: string;
   float?: "right" | "left";
   bullet?: string;
-  link?: string;
+  link?: any;
   onClick?: Function;
   text?: string;
 }
 
 export const ListItem = ({ children, icon, image, float, bullet, classes, link, onClick, text }: IListItemProps) => (
-  React.createElement(link ? config.linkElement : "div", { className: css(classes, "item"), href: link, onClick: onClick, "data-value": bullet },
+  React.createElement(link ? config.linkElement : config.divElement, { className: css(classes, "item"), href: link, onClick: onClick, "data-value": bullet },
     float && <div className={css(float, "floated content") }>
               { children[1]}
             </div>,

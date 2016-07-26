@@ -26,7 +26,7 @@ export interface IButtonProps {
   active?: boolean;
   onClick?: Function;
   url?: string;
-  children: any;
+  children?: any;
   target?: string;
   step?: string;
   style?: any;

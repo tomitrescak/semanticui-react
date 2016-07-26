@@ -9,7 +9,7 @@ import Icon from "../components/icon_view";
 
 interface ITab {
   title: string;
-  text: string;
+  text?: string;
   children?: any;
   url?: string;
   name?: string;
