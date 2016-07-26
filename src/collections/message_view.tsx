@@ -18,7 +18,7 @@ interface IProps extends IColor {
 export const Menu = ({ classes, children, header, color, size, icon, attached, compact, fluid}: IProps) => (
   <div className={css("ui", classes, color, size, { attached, compact, "icon": icon, fluid }, "message") }>
     { icon ? <i className={css(icon, "icon") }></i> : null }
-    <div class="content">
+    <div className="content">
       { header && <div className="header">{ config.i18n(header) }</div> }
       { children }
     </div>
