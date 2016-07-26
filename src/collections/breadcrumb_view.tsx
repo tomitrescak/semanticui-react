@@ -21,7 +21,7 @@ export const Breadcrumbs = ({ classes, children, divider, dividerIcon }: IProps)
           if (dividerIcon) {
             crumbs.push(<i key={index * 2 + 1} className={css(dividerIcon, "icon divider")} />);
           } else {
-            crumbs.push(<span key={index * 2 + 1} class="divider"> {divider} </span>);
+            crumbs.push(<span key={index * 2 + 1} className="divider"> {divider} </span>);
           }
         } else {
           crumbs.push(<Breadcrumb key={index * 2} active={true} { ...child.props } />);

@@ -31,7 +31,7 @@ export default class Accordion extends React.Component<IProps, {}> {
 // this.props.menu ?
 //   this.props.children.map((item: any, index: number) => {
 //     return (
-//       <div class="item" key={index}>{ item }</div>
+//       <div className="item" key={index}>{ item }</div>
 //     );
 //   })
 // :

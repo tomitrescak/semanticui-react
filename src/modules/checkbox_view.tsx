@@ -27,7 +27,7 @@ interface ICheckboxProps extends IProps {
 }
 
 export const Checkbox = ({children, id, name, classes, text, checked, disabled, fitted, variation, onChange }: ICheckboxProps) => (
-  <div class="field">
+  <div className="field">
     <div className={css("ui", classes, variation,
       {
         "checked": checked,
@@ -41,7 +41,7 @@ export const Checkbox = ({children, id, name, classes, text, checked, disabled, 
 );
 
 export const Radio = ({children, id, name, classes, text, checked, fitted, disabled, onChange }: IProps) => (
-  <div class="field">
+  <div className="field">
     <div className={css("ui", classes,
       {
         "checked": checked,

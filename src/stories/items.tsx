@@ -9,7 +9,7 @@ import { Item, Items } from "../index";
 //       <Items>
 //         <Item.Main meta={[{ name: "Description" }]} header="Header" image="http://semantic-ui.com/images/wireframe/image.png">
 //           <div>Content</div>
-//           <div>Extra, <i class="green check icon"></i>121 Votes</div>
+//           <div>Extra, <i className="green check icon"></i>121 Votes</div>
 //         </Item>
 //       </Items>
 //     );
