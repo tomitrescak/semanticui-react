@@ -41,7 +41,6 @@ export const FeedItem = ({ children, image, date, extraImages, likes, text, extr
       <div className="summary">
         {text && config.i18n(text)}
         {summary}
-        {children}
         <div className="date">
           {date}
         </div>
@@ -63,6 +62,7 @@ export const FeedItem = ({ children, image, date, extraImages, likes, text, extr
             <i className="like icon" /> {likes}
           </a>
         </div> : null}
+      { children }
     </div>
   </div>
 );

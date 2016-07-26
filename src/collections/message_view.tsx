@@ -12,16 +12,14 @@ interface IProps extends IColor {
   icon?: string;
   attached?: boolean;
   compact?: boolean;
+  fluid?: boolean;
 }
 
-export const Menu = ({ classes, children, header, color, size, icon, attached, compact}: IProps) => (
-  <div className={css("ui", classes, color, size, { "attached": attached, "compact": compact, "icon": icon }, "message") }>
+export const Menu = ({ classes, children, header, color, size, icon, attached, compact, fluid}: IProps) => (
+  <div className={css("ui", classes, color, size, { attached, compact, "icon": icon, fluid }, "message") }>
     { icon ? <i className={css(icon, "icon") }></i> : null }
     <div class="content">
-      { header ? <div className="header">
-                  { config.i18n(header) }
-                 </div>
-               : null }
+      { header && <div className="header">{ config.i18n(header) }</div> }
       { children }
     </div>
   </div>

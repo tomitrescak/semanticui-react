@@ -17,7 +17,7 @@ export interface IProps {
 export const MenuItem = ({classes, icon, text, children, link, onClick }: IProps) => (
   React.createElement(link ? config.linkElement : "div", { className: css(classes, "item"), href: link, onClick: onClick },
     icon && <i className={css("icon", icon) }></i>,
-    config.i18n(text)
+    text && config.i18n(text)
   )
 );
 

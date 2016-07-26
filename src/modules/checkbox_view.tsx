@@ -19,13 +19,14 @@ interface IProps {
   checked?: boolean;
   disabled?: boolean;
   fitted?: boolean;
+  onChange?: Function;
 }
 
 interface ICheckboxProps extends IProps {
   variation?: "slider" | "toggle";
 }
 
-export const Checkbox = ({children, id, name, classes, text, checked, disabled, fitted, variation }: ICheckboxProps) => (
+export const Checkbox = ({children, id, name, classes, text, checked, disabled, fitted, variation, onChange }: ICheckboxProps) => (
   <div class="field">
     <div className={css("ui", classes, variation,
       {
@@ -33,13 +34,13 @@ export const Checkbox = ({children, id, name, classes, text, checked, disabled, 
         "disabled": disabled,
         "fitted": fitted
       }, "checkbox")}>
-      <input type="checkbox" name={ name ? name : id} defaultChecked={checked} />
+      <input type="checkbox" name={ name ? name : id} defaultChecked={checked} onChange={onChange} />
       <label htmlFor={id}>{config.i18n(text)}</label>
     </div>
   </div>
 );
 
-export const Radio = ({children, id, name, classes, text, checked, fitted, disabled }: IProps) => (
+export const Radio = ({children, id, name, classes, text, checked, fitted, disabled, onChange }: IProps) => (
   <div class="field">
     <div className={css("ui", classes,
       {
@@ -47,7 +48,7 @@ export const Radio = ({children, id, name, classes, text, checked, fitted, disab
         "disabled": disabled,
         "fitted": fitted
       }, "radio checkbox")}>
-      <input type="radio" name={ name ? name : id} defaultChecked={checked} />
+      <input type="radio" name={ name ? name : id} defaultChecked={checked} onChange={onChange} />
       <label htmlFor={id}>{text}</label>
     </div>
   </div>
