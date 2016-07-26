@@ -14,7 +14,7 @@ export interface IButtonProps {
   inverted?: boolean;
   compact?: boolean;
   icon?: string;
-  labeled?: "left" | "right";
+  labeled?: "left" | "right" | boolean;
   floated?: "left" | "right";
   loading?: boolean;
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
