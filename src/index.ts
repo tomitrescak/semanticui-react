@@ -12,6 +12,7 @@ export { default as DropdownButton } from "./modules/dropdown_button_view";
 export { Feed, FeedItem } from "./views/feed_view";
 export { default as Form} from "./collections/form_view";
 export { Fields, Field } from "./components/fields_view";
+export { default as GridSplitter } from "./components/grid_splitter";
 export { default as Grid} from "./collections/grid_view";
 export { Header1, Header2, Header3, Header4, Header5 } from "./components/header_view";
 export { default as Input} from "./components/input_view";

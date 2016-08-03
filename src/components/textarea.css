@@ -1,0 +1,10 @@
+.ui.markdownPreview {
+  padding: 20px;
+  height: 100%;
+  overflow: auto;
+  box-sizing: content-box;
+}
+
+.ui.textarea .ui.gridSplitter.second {
+  padding: 23px 0px 0px 6px;
+}

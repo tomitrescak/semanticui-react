@@ -1,0 +1,37 @@
+  .ui.gridSplitter.gsContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: table;
+  }
+  
+  .ui.gridSplitter.first {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+    margin-right: 3px;
+  }
+
+  .ui.gridSplitter.second {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+    margin-left: 3px
+  }
+
+  .ui.gridSplitter.resizer {
+    position: absolute;
+    width: 8px;
+    height: 40px;
+    background-color: darkgray;
+    z-index: 10;
+    cursor: ew-resize;
+    border-radius: 3px;
+    border: solid 1px #333;
+    top: 40px;
+    margin-left: -4px;
+  }
+
+  .ui.gridSplitter.resizer.h50 {
+    left: 50%
+  }

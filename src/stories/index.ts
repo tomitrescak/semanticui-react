@@ -1,8 +1,8 @@
-import * as $ from "jquery";
-// import { init } from "../index";
+// import * as $ from "jquery";
+// // import { init } from "../index";
 
-global.$ = $;
-global.jQuery = $;
+// global.$ = $;
+// global.jQuery = $;
 
 // init({
 //     Accordion: true,
@@ -39,6 +39,7 @@ import "./comments";
 import "./divider";
 import "./dropdown";
 import "./feed";
+import "./grid_splitter";
 import "./header";
 import "./input";
 import "./items";
@@ -53,3 +54,4 @@ import "./search";
 import "./sidebar";
 import "./steps";
 import "./tabs";
+import "./textarea";

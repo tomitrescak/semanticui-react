@@ -1,0 +1,37 @@
+import * as React from "react";
+import { storiesOf, action } from "@kadira/storybook";
+
+import { GridSplitter } from "../index";
+
+storiesOf("Grid Splitter", module)
+  .add("vertical split", () => {
+    return (
+      <div>
+      <GridSplitter >
+        <div style={{ background: 'pink' }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat sagittis tincidunt. Nam dignissim, libero et tincidunt blandit, tellus risus scelerisque ante, ut eleifend ex neque non augue. Mauris vel justo ante. Sed maximus nec tellus at euismod. Sed iaculis elit quam, hendrerit tempus urna luctus ac. Phasellus id sem lectus. In hac habitasse platea dictumst. Maecenas sit amet felis egestas, accumsan nisi et, blandit quam. Sed nec arcu ultricies, dapibus mi in, aliquam neque. Vestibulum purus purus, fringilla in posuere sit amet, semper a enim. Aenean luctus suscipit neque sit amet facilisis. Nullam sed dolor ante. Sed a odio non orci feugiat tincidunt. Aliquam iaculis et velit dictum congue. Aenean pulvinar velit ipsum, ut vestibulum purus posuere volutpat.
+
+Nam ornare volutpat justo nec posuere. Aliquam ac finibus nunc. Integer rhoncus, dui vitae gravida mattis, tortor felis eleifend dui, et congue orci nulla id nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ullamcorper efficitur auctor. Maecenas interdum condimentum nulla eu sodales. In sed massa a erat molestie volutpat. Suspendisse sed mauris et eros vestibulum iaculis ac ac ex. Cras quis est ut tortor posuere dictum. Aenean eros est, consequat ut justo finibus, volutpat luctus felis. Vivamus efficitur quam et tortor volutpat laoreet. Aliquam nibh massa, eleifend non metus quis, mattis molestie mauris. Donec congue rutrum lacus a bibendum. Maecenas ultrices magna nec tempor congue. In maximus sapien eu sapien bibendum, sit amet pellentesque ante viverra. Curabitur faucibus euismod venenatis.
+
+Quisque tempor ultricies orci quis congue. Mauris tempus sagittis posuere. Vivamus eget urna velit. Phasellus id commodo nibh, id sodales libero. Pellentesque placerat diam vitae suscipit porttitor. Ut ultricies auctor eros nec porta. Nullam dui sem, mollis dignissim leo pellentesque, imperdiet aliquet nibh. Phasellus tristique scelerisque sem, a condimentum felis vestibulum ut. Nam quis lectus a libero ultrices gravida. Pellentesque vulputate orci vitae nulla venenatis, id pharetra ex commodo.
+
+Duis dictum ut justo sit amet egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ac finibus felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque eget elementum nisl, ut ornare magna. Fusce pulvinar blandit diam, at varius tellus finibus at. Nam rhoncus aliquet tincidunt. Donec mattis arcu a porttitor tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut mollis, est semper luctus bibendum, lacus libero efficitur sem, vel imperdiet nibh sem et erat. Integer tincidunt lacus sed quam congue varius. Suspendisse eu massa dolor. Mauris turpis ipsum, lacinia eu auctor in, fermentum ac dolor. Nam nec molestie magna, consectetur iaculis turpis.
+
+Suspendisse ac augue nunc. Curabitur faucibus vulputate felis, ac luctus tellus aliquet a. Maecenas tempor nibh eu nunc maximus, in rhoncus mauris aliquam. Donec faucibus ac ante sed rutrum. Mauris ut nulla mauris. Etiam scelerisque condimentum leo at mattis. Aenean in augue id tellus ornare laoreet. Cras vehicula arcu vel posuere suscipit. Nunc cursus condimentum turpis sit amet porta. Cras eu tristique mauris. Nunc gravida est sit amet tellus rutrum, ac lobortis tortor posuere.
+        </div>
+
+        <div style={{ background: 'grey' }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat sagittis tincidunt. Nam dignissim, libero et tincidunt blandit, tellus risus scelerisque ante, ut eleifend ex neque non augue. Mauris vel justo ante. Sed maximus nec tellus at euismod. Sed iaculis elit quam, hendrerit tempus urna luctus ac. Phasellus id sem lectus. In hac habitasse platea dictumst. Maecenas sit amet felis egestas, accumsan nisi et, blandit quam. Sed nec arcu ultricies, dapibus mi in, aliquam neque. Vestibulum purus purus, fringilla in posuere sit amet, semper a enim. Aenean luctus suscipit neque sit amet facilisis. Nullam sed dolor ante. Sed a odio non orci feugiat tincidunt. Aliquam iaculis et velit dictum congue. Aenean pulvinar velit ipsum, ut vestibulum purus posuere volutpat.
+
+Nam ornare volutpat justo nec posuere. Aliquam ac finibus nunc. Integer rhoncus, dui vitae gravida mattis, tortor felis eleifend dui, et congue orci nulla id nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut ullamcorper efficitur auctor. Maecenas interdum condimentum nulla eu sodales. In sed massa a erat molestie volutpat. Suspendisse sed mauris et eros vestibulum iaculis ac ac ex. Cras quis est ut tortor posuere dictum. Aenean eros est, consequat ut justo finibus, volutpat luctus felis. Vivamus efficitur quam et tortor volutpat laoreet. Aliquam nibh massa, eleifend non metus quis, mattis molestie mauris. Donec congue rutrum lacus a bibendum. Maecenas ultrices magna nec tempor congue. In maximus sapien eu sapien bibendum, sit amet pellentesque ante viverra. Curabitur faucibus euismod venenatis.
+
+Quisque tempor ultricies orci quis congue. Mauris tempus sagittis posuere. Vivamus eget urna velit. Phasellus id commodo nibh, id sodales libero. Pellentesque placerat diam vitae suscipit porttitor. Ut ultricies auctor eros nec porta. Nullam dui sem, mollis dignissim leo pellentesque, imperdiet aliquet nibh. Phasellus tristique scelerisque sem, a condimentum felis vestibulum ut. Nam quis lectus a libero ultrices gravida. Pellentesque vulputate orci vitae nulla venenatis, id pharetra ex commodo.
+
+Duis dictum ut justo sit amet egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ac finibus felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque eget elementum nisl, ut ornare magna. Fusce pulvinar blandit diam, at varius tellus finibus at. Nam rhoncus aliquet tincidunt. Donec mattis arcu a porttitor tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut mollis, est semper luctus bibendum, lacus libero efficitur sem, vel imperdiet nibh sem et erat. Integer tincidunt lacus sed quam congue varius. Suspendisse eu massa dolor. Mauris turpis ipsum, lacinia eu auctor in, fermentum ac dolor. Nam nec molestie magna, consectetur iaculis turpis.
+
+Suspendisse ac augue nunc. Curabitur faucibus vulputate felis, ac luctus tellus aliquet a. Maecenas tempor nibh eu nunc maximus, in rhoncus mauris aliquam. Donec faucibus ac ante sed rutrum. Mauris ut nulla mauris. Etiam scelerisque condimentum leo at mattis. Aenean in augue id tellus ornare laoreet. Cras vehicula arcu vel posuere suscipit. Nunc cursus condimentum turpis sit amet porta. Cras eu tristique mauris. Nunc gravida est sit amet tellus rutrum, ac lobortis tortor posuere.
+        </div>
+      </GridSplitter>
+      </div>
+    );
+  });
