@@ -7,6 +7,8 @@ import * as css from "classnames";
 // import "semantic-ui-css/components/accordion.css";
 
 interface IProps {
+  classes?: string;
+  styled?: boolean;
   exclusive?: boolean;
   children?: any;
   id: string;
@@ -16,7 +18,7 @@ interface IProps {
 export default class Accordion extends React.Component<IProps, {}> {
   render() {
     return (
-      <div className={ css("ui", { "vertical": this.props.menu }, "accordion", { "menu": this.props.menu })} id={this.props.id} >
+      <div className={ css("ui", { "vertical": this.props.menu }, { styled: this.props.styled}, this.props.classes, "accordion", { "menu": this.props.menu })} id={this.props.id} >
         {
           this.props.children }
       </div>
