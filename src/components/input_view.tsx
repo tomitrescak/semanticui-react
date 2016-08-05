@@ -20,6 +20,8 @@ interface IProps {
   rightLabel?: string;
   inline?: boolean;
   search?: boolean;
+  enabled?: boolean;
+  readOnly?: boolean;
 }
 
 export default class  extends React.Component<IProps, {}> {
@@ -43,6 +45,7 @@ export default class  extends React.Component<IProps, {}> {
           { right: this.props.rightLabel },
           { labeled: this.props.leftLabel || this.props.rightLabel },
           { search: this.props.search },
+          { enabled: this.props.enabled },
           this.props.classes, "input") }>
           { this.props.leftLabel ? <div className="ui label">{ this.props.leftLabel }</div> : null }
           <input
@@ -53,6 +56,7 @@ export default class  extends React.Component<IProps, {}> {
             onChange={ this.props.onChange ? this.props.onChange.bind(this) : null }
             defaultValue={this.props.defaultValue}
             value={this.props.value}
+            readOnly={this.props.readOnly}
           />
           { this.props.icon ? <i className={css(this.props.icon, "icon")} /> : null }
           { this.props.rightLabel ? <div className="ui label">{ config.i18n(this.props.rightLabel) }</div> : null }
