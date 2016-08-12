@@ -1,11 +1,26 @@
 import * as React from "react";
 import * as css from "classnames";
+
 import config from "../config/config";
 
 import { Button, GridSplitter } from '../index';
+import jss from 'jss';
 
+const { classes } = jss.createStyleSheet({
+  markdownPreview: {
+    padding: '20px',
+    height: '100%',
+    overflow: 'auto',
+    'box-sizing': 'content-box'
+  },
+  container: {
+    '& .ui.gridSplitter.second': {
+      padding: '23px 0px 0px 6px'
+    }
+  }
+}).attach();
 
-import "./textarea.css";
+//import "./textarea.css";
 
 interface IProps {
   classes?: string;
@@ -76,9 +91,9 @@ export default class extends React.Component<IProps, {}> {
 
       return (
 
-        <GridSplitter classes="ui textarea">
+        <GridSplitter classes={css("ui textarea", classes.container)}>
           <TextArea {...this.props} onChange={this.previewFunction} />
-          <div id={id} className="ui segment markdownPreview"></div>
+          <div id={id} className={css("ui segment", classes.markdownPreview)}></div>
         </GridSplitter>
 
       );

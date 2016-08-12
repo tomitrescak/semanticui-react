@@ -20,7 +20,7 @@ interface IProps {
   rightLabel?: string;
   inline?: boolean;
   search?: boolean;
-  enabled?: boolean;
+  disabled?: boolean;
   readOnly?: boolean;
 }
 
@@ -45,7 +45,7 @@ export default class  extends React.Component<IProps, {}> {
           { right: this.props.rightLabel },
           { labeled: this.props.leftLabel || this.props.rightLabel },
           { search: this.props.search },
-          { enabled: this.props.enabled },
+          { disabled: this.props.disabled },
           this.props.classes, "input") }>
           { this.props.leftLabel ? <div className="ui label">{ this.props.leftLabel }</div> : null }
           <input

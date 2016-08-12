@@ -1,5 +1,5 @@
 import * as React from 'react'; $
-import './grid_splitter.css';
+// import './grid_splitter.css';
 import * as css from "classnames";
 
 // function relativeResize1(lDiv: JQuery, rDiv: JQuery, marker: JQuery, evt: any) {
@@ -18,13 +18,55 @@ import * as css from "classnames";
 //   };
 // }
 
+import jss from 'jss';
+
+const styleSheet = jss.createStyleSheet({
+  container:
+  {
+    '& .gsContainer': {
+      height: '100%',
+      width: '100%',
+      position: 'relative',
+      display: 'table'
+    },
+    '& .gsFirst': {
+      display: 'table-cell',
+      width: '50%',
+      height: '100%',
+      'margin-right': '3px',
+    },
+    '& .gsSecond': {
+      display: 'table-cell',
+      width: '50%',
+      height: '100%',
+      'margin-left': '3px'
+    },
+    '& .gsResizer': {
+      position: 'absolute',
+      width: '8px',
+      height: '40px',
+      'background-color': 'darkgray',
+      'z-index': '10',
+      'cursor': 'ew-resize',
+      'border-radius': '3px',
+      'border': 'solid 1px #333',
+      'top': '40px',
+      'margin-left': '-4px'
+    },
+    '& .resizer.h50': {
+      left: '50%'
+    }
+  }
+}).attach();
+const jssClasses = styleSheet.classes;
+
 function relativeResize(container: JQuery, lDiv: JQuery, rDiv: JQuery, marker: JQuery, evt: any) {
   return function (e: MouseEvent) {
 
     let left = lDiv.offset().left;
 
     let relativeWindow = container.width();
-    
+
     let relativePosition = e.clientX - left;
     let minLeft = left + 150;
     let maxRight = window.innerWidth - 300;
@@ -72,14 +114,14 @@ export const ExerciseView = ({ split, resized, children, classes }: IComponent) 
   let resizeHandle: HTMLElement;
 
   return (
-    <div ref={(node) => container = node} className={css("ui gridSplitter gsContainer", classes)}>
+    <div ref={(node) => container = node} className={css("ui gridSplitter", jssClasses.container, "gsContainer", classes)}>
       <div ref={(node) => resizeHandle = node}
-        className={'ui gridSplitter resizer h50'}
+        className={'gsResizer h50'}
         onMouseDown={() => resizer(container, left, right, resizeHandle, resized)} />
-      <div ref={(node) => left = node} className={"ui gridSplitter first " + (split ? split : '')}>
+      <div ref={(node) => left = node} className={"gsFirst " + (split ? split : '')}>
         {children[0]}
       </div>
-      <div ref={(node) => right = node}  className={"ui gridSplitter second " + (split ? split : '')}>
+      <div ref={(node) => right = node}  className={"gsSecond " + (split ? split : '')}>
         {children[1]}
       </div>
     </div>
