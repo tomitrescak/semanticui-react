@@ -43,7 +43,7 @@ export const Button = ({
     return React.createElement(el, {
       target: target,
       step: step,
-      type,
+      type: type ? type : "button",
       style,
       className: css("ui", classes, size, attached,
         labeled,
