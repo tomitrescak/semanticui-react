@@ -33,12 +33,13 @@ interface IProps {
   cols?: number;
   inline?: boolean;
   previewMarkdown?: boolean;
+  name?: string;
 }
 
 let marked: any = null;
 let idx = 0;
 
-const TextArea = ({ label, classes, placeholder, onChange, defaultValue, value, rows, cols, inline}: IProps) => (
+const TextArea = ({ label, classes, placeholder, onChange, defaultValue, value, rows, cols, inline, name}: IProps) => (
   <div className={css("field", { inline: inline })}>
     {label ? <label>{config.i18n(label)}</label> : null}
     <textarea
@@ -49,6 +50,7 @@ const TextArea = ({ label, classes, placeholder, onChange, defaultValue, value, 
       value={value}
       rows={rows}
       cols={cols}
+      name={name}
       />
   </div>
 )

@@ -10,6 +10,7 @@ export interface IButtonProps {
   classes?: string;
   text?: string;
   basic?: boolean;
+  type?: "submit" | "button";
   color?: "primary" | "secondary" | "success" | "failure" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
   inverted?: boolean;
   compact?: boolean;
@@ -35,13 +36,14 @@ export interface IButtonProps {
 export const Button = ({
     text, classes, color, inverted, floated, target,
     icon, labeled, loading, size, circular, toggle, step, style,
-    fluid, disabled, attached, basic, active, compact, onClick, url, children
+    fluid, disabled, attached, basic, active, compact, onClick, url, children, type
   }: IButtonProps) => {
 
     const el = url ? config.linkElement : "button";
     return React.createElement(el, {
       target: target,
       step: step,
+      type,
       style,
       className: css("ui", classes, size, attached,
         labeled,

@@ -24,7 +24,7 @@ interface IProps {
   readOnly?: boolean;
 }
 
-export default class  extends React.Component<IProps, {}> {
+export default class Input extends React.Component<IProps, {}> {
   get value() {
     return this.refs["input"]["value"];
   }

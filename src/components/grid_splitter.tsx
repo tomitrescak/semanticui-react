@@ -1,6 +1,6 @@
-import * as React from 'react'; $
-// import './grid_splitter.css';
-import * as css from "classnames";
+import * as React from 'react';
+import * as css from "classnames"; 
+import jss from 'jss';
 
 // function relativeResize1(lDiv: JQuery, rDiv: JQuery, marker: JQuery, evt: any) {
 //   return function (e: MouseEvent) {
@@ -18,7 +18,7 @@ import * as css from "classnames";
 //   };
 // }
 
-import jss from 'jss';
+
 
 const styleSheet = jss.createStyleSheet({
   container:
