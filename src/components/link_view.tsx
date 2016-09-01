@@ -29,4 +29,6 @@ export const Link = ({classes, style, text, link, icon, onClick, children }: IPr
   );
 };
 
+Link['displayName'] = 'Link';
+
 export default Link;

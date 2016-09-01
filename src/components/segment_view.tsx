@@ -40,4 +40,6 @@ export const Segment = ({classes, children, attached, loading, inverted, compact
   </div>
 );
 
+Segment['displayName'] = 'Segment';
+
 export default Segment;

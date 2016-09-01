@@ -32,4 +32,6 @@ export const Sidebar = ({inverted, children, id, visible, position, classes }: I
   </div>
 );
 
+Sidebar['displayName'] = 'Sidebar';
+
 export default Sidebar;

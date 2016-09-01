@@ -27,4 +27,7 @@ export const Menu = ({ classes, children, pagination, vertical, inverted, color,
     { children }
   </div>
 );
+
+Menu['displayName'] = 'Menu';
+
 export default Menu;

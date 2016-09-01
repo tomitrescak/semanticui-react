@@ -13,4 +13,6 @@ export const Icon = ({classes, icon}: IProps) => (
   <i className={css(classes, icon, "icon")} />
 );
 
+Icon['displayName'] = 'Icon';
+
 export default Icon;

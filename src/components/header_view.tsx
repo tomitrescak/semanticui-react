@@ -64,3 +64,9 @@ export const HeaderContent = (headerSize: string, props: IProps) => {
     )
   );
 };
+
+Header1['displayName'] = 'Header1';
+Header2['displayName'] = 'Header2';
+Header3['displayName'] = 'Header3';
+Header4['displayName'] = 'Header4';
+Header5['displayName'] = 'Header5';

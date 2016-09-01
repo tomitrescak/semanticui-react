@@ -15,4 +15,6 @@ export const Loader = ({classes, inline, size, active }: IProps) => (
   <div className={css("ui", { "inline": inline, "active": active }, size, classes, "loader")} />
 );
 
+Loader['displayName'] = 'Loader';
+
 export default Loader;

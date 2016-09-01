@@ -15,7 +15,7 @@ interface IProps extends IColor {
   fluid?: boolean;
 }
 
-export const Menu = ({ classes, children, header, color, size, icon, attached, compact, fluid}: IProps) => (
+export const Message = ({ classes, children, header, color, size, icon, attached, compact, fluid}: IProps) => (
   <div className={css("ui", classes, color, size, { attached, compact, "icon": icon, fluid }, "message") }>
     { icon ? <i className={css(icon, "icon") }></i> : null }
     <div className="content">
@@ -23,6 +23,8 @@ export const Menu = ({ classes, children, header, color, size, icon, attached, c
       { children }
     </div>
   </div>
-
 );
-export default Menu;
+
+Message['displayName'] = 'Message';
+
+export default Message;

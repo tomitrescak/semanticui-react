@@ -19,6 +19,8 @@ interface IProps {
 }
 
 export default class Rating extends React.Component<IProps, {}> {
+  static displayName = "Progress";
+
   render() {
     //const { error } = this.props;
 

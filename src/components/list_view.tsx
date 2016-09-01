@@ -70,3 +70,5 @@ export const ListItem = ({ children, icon, image, float, bullet, classes, link, 
     config.i18n(text)
   )
 );
+
+ListItem['displayName'] = 'ListItem';

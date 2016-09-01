@@ -39,6 +39,8 @@ export const Breadcrumbs = ({ classes, children, divider, dividerIcon }: IProps)
   );
 };
 
+Breadcrumbs['displayName'] = 'Breadcrumbs';
+
 interface IBreadcrumbProps {
   text?: string;
   link?: any;
@@ -56,4 +58,7 @@ export const Breadcrumb = ({ text, link, active, children }: IBreadcrumbProps) =
   children
   )
 );
+
+Breadcrumb['displayName'] = 'Breadcrumb';
+
 export default Breadcrumbs;

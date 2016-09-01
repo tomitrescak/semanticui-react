@@ -15,6 +15,8 @@ export interface IProps {
 }
 
 export default class MenuDropdown extends React.Component<IProps, {}> {
+  static displayName = 'MenuDropdown';
+  
   render() {
     const { icon, text, children, id } =  this.props;
     return (

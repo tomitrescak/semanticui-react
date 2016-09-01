@@ -22,4 +22,6 @@ export const MenuItem = ({classes, icon, text, children, link, onClick }: IProps
   )
 );
 
+MenuItem['displayName'] = 'MenuItem';
+
 export default MenuItem;

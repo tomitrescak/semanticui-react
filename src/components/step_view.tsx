@@ -42,6 +42,8 @@ interface IStepProps {
   children?: any;
 }
 
+Steps['displayName'] = 'Steps';
+
 export const Step = ({ active, icon, title, children, disabled, completed }: IStepProps) => (
   <div className={css(
     {
@@ -56,3 +58,5 @@ export const Step = ({ active, icon, title, children, disabled, completed }: ISt
     </div>
   </div >
 );
+
+Step['displayName'] = 'Step';

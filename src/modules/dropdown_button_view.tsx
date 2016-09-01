@@ -17,6 +17,8 @@ interface IProps {
 }
 
 export default class DropdownButton extends React.Component<IProps, {}> {
+  static displayName = 'DropdownButton';
+  
   render() {
     return (
       <div className={css("ui", this.props.classes, this.props.color,

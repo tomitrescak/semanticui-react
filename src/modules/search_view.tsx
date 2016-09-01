@@ -20,6 +20,8 @@ interface IProps {
 
 
 export default class Search extends React.Component<IProps, {}> {
+  static displayName = 'Search';
+  
   render() {
     return (
       <div id={this.props.id} className={css("ui",

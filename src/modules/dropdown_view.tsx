@@ -29,6 +29,7 @@ interface IProps {
 }
 
 export class Dropdown extends React.Component<IProps, {}> {
+  static displayName = 'Dropdown';
   render() {
     let selection = this.props.selection === undefined ? true : false;
     const dropdown = (

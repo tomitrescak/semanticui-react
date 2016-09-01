@@ -37,4 +37,7 @@ export const Item = ({children, title, active}: IProps) => (
     </div>
   </div>
 );
+
+Item['displayName'] = 'AccordionItem';
+
 export default Item;

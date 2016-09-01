@@ -33,4 +33,6 @@ export const Grid = ({classes, columns, children, page, align, stackable, divide
   </div>
 );
 
+Grid['displayName'] = 'Grid';
+
 export default Grid;

@@ -15,4 +15,6 @@ export const Site = ({classes, children}: IProps) => (
   </div>
 );
 
+Site['displayName'] = 'Site';
+
 export default Site;

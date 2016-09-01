@@ -16,4 +16,6 @@ export const Column = ({classes, width, children}: IProps) => (
   </div>
 );
 
+Column['displayName'] = 'Column';
+
 export default Column;

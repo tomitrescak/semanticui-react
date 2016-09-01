@@ -37,4 +37,6 @@ export const Modal = ({ id, header, children, image,
   </div>
 );
 
+Modal['displayName'] = 'Modal';
+
 export default Modal;

@@ -67,4 +67,6 @@ export const Label = ({
       rightIcon && <i className={css(rightIcon, "icon") }></i>)
   );
 
+Label['displayName'] = 'Label';
+
 export default Label;

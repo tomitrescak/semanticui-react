@@ -25,6 +25,8 @@ interface IProps {
 }
 
 export default class Input extends React.Component<IProps, {}> {
+  static displayName: string = 'Input';
+  
   get value() {
     return this.refs["input"]["value"];
   }

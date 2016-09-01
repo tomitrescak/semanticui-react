@@ -15,6 +15,8 @@ export const Fields = ({ children, type }: IFieldsProps) => (
   </div>
 );
 
+Fields['displayName'] = 'Fields';
+
 interface IFieldProps {
   children?: any;
   type: "inline" | "grouped";
@@ -31,5 +33,7 @@ export const Field = ({ children, type, label, text, width, style }: IFieldProps
     { children }
   </div>
 );
+
+Field['displayName'] = 'Field';
 
 export default Fields;

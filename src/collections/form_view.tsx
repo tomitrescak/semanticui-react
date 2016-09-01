@@ -16,4 +16,6 @@ export const Form = ({classes, children}: IProps) => (
   </div>
 );
 
+Form['displayName'] = 'Form';
+
 export default Form;

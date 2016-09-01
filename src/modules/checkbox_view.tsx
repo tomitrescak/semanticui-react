@@ -40,6 +40,8 @@ export const Checkbox = ({children, id, name, classes, text, checked, disabled, 
   </div>
 );
 
+Checkbox['displayName'] = 'Checkbox';
+
 export const Radio = ({children, id, name, classes, text, checked, fitted, disabled, onChange }: IProps) => (
   <div className="field">
     <div className={css("ui", classes,
@@ -53,3 +55,5 @@ export const Radio = ({children, id, name, classes, text, checked, fitted, disab
     </div>
   </div>
 );
+
+Radio['displayName'] = 'Radio';

@@ -19,4 +19,6 @@ export const Divider = ({classes, children, icon, isHeader, orientation, inverte
   </div>
 );
 
+Divider['displayName'] = 'Divider';
+
 export default Divider;

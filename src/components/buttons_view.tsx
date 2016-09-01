@@ -19,4 +19,6 @@ export const Buttons = ({classes, children, vertical, icon, labeled, color, size
   </div>
 );
 
+Buttons['displayName'] = 'Buttons';
+
 export default Buttons;

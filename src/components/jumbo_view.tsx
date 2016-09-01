@@ -9,10 +9,12 @@ interface IProps {
   inverted?: boolean;
 }
 
-export const Icon = ({classes, inverted, children}: IProps) => (
+export const Jumbo = ({classes, inverted, children}: IProps) => (
   <div className={css("ui", classes, { inverted }, "jumbo")}>
     { children }
   </div>
 );
 
-export default Icon;
+Jumbo['displayName'] = 'Jumbo';
+
+export default Jumbo;

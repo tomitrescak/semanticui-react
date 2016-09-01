@@ -29,6 +29,8 @@ interface ITabs {
 }
 
 export class Tabs extends React.Component<ITabs, {}> {
+  static displayName = 'Tabs';
+
   render() {
     if (!Array.isArray(this.props.children)) {
       throw new Error("there need to be at least two tabs ...");
@@ -98,5 +100,7 @@ export const Tab = ({ title, children }: ITab) => (
     { children }
   </span>
 );
+
+Tab['displayName'] = 'Tab';
 
 export default Tabs;

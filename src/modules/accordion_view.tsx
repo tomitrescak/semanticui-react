@@ -16,6 +16,8 @@ interface IProps {
 }
 
 export default class Accordion extends React.Component<IProps, {}> {
+  static displayName = 'Accordion';
+  
   render() {
     return (
       <div className={ css("ui", { "vertical": this.props.menu }, { styled: this.props.styled}, this.props.classes, "accordion", { "menu": this.props.menu })} id={this.props.id} >

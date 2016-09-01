@@ -16,4 +16,6 @@ export const Text = ({classes, style, text }: IProps) => (
   </span>
 );
 
+Text['displayName'] = 'Text';
+
 export default Text;

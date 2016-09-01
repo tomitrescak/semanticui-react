@@ -45,6 +45,8 @@ export const Image = (props: IProps) => (
   <img className={createClass(props)} src={props.src} />
 );
 
+Image['displayName'] = 'Image';
+
 interface IImageProps extends IProps {
   link: string;
 }
@@ -54,5 +56,7 @@ export const ImageLink = (props: IImageProps) => (
     <img className={createClass(props)} src={props.src} />
   )
 );
+
+ImageLink['displayName'] = 'ImageLink';
 
 export default Image;

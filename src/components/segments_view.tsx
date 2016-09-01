@@ -8,10 +8,12 @@ interface IProps {
   children?: any;
 }
 
-export const Segment = ({classes, children}: IProps) => (
+export const Segments = ({classes, children}: IProps) => (
   <div className={css("ui", classes, "segments")}>
     { children }
   </div>
 );
 
-export default Segment;
+Segments['displayName'] = 'Segments';
+
+export default Segments;
