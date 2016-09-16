@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/list.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   divided?: boolean;
@@ -45,7 +45,7 @@ export const List = ({
     </div>
   );
 
-interface IListItemProps {
+export interface IListItemProps {
   classes?: string;
   children?: any;
   icon?: string;

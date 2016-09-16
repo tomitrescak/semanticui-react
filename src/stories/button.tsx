@@ -2,7 +2,8 @@ import * as React from "react";
 import { storiesOf, action } from "@kadira/storybook";
 
 import { Button, Buttons, Segment } from "../index";
-import { Button as ButtonIntl } from "../i18n";
+
+// import { Button as ButtonIntl } from "../i18n";
 
 storiesOf("Button", module)
   .add("default", () => {
@@ -18,11 +19,6 @@ storiesOf("Button", module)
   .add("link", () => {
     return (
       <Button text="Button" url="a/b.html" />
-    );
-  })
-  .add("localised", () => {
-    return (
-      <ButtonIntl mid="button" text="Button" />
     );
   })
   .add("colors", () => {

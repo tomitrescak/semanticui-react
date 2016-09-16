@@ -22,7 +22,7 @@ const { classes } = jss.createStyleSheet({
 
 //import "./textarea.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   placeholder?: string;
   label?: string;

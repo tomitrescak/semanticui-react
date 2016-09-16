@@ -7,7 +7,7 @@ import config from "../config/config";
 // import "semantic-ui-css/components/dropdown.js";
 
 
-interface IProps {
+export interface IProps {
   id: string;
   classes?: string;
   color?: "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
@@ -87,7 +87,7 @@ export class Dropdown extends React.Component<IProps, {}> {
   }
 }
 
-interface IDropdownItem {
+export interface IDropdownItem {
   value: string;
   image?: string;
   icon?: string;

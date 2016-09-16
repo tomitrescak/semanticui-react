@@ -8,7 +8,7 @@ import config from "../config/config";
 // import "semantic-ui-css/components/modal.js";
 
 
-interface IProps {
+export interface IProps {
   id: string;
   classes?: string;
   header?: string;

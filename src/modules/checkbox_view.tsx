@@ -10,7 +10,7 @@ interface ITab {
   children?: any;
 }
 
-interface IProps {
+export interface IProps {
   classes?: string;
   id?: string;
   name?: string;
@@ -19,10 +19,10 @@ interface IProps {
   checked?: boolean;
   disabled?: boolean;
   fitted?: boolean;
-  onChange?: Function;
+  onChange?: React.EventHandler<React.FormEvent>;
 }
 
-interface ICheckboxProps extends IProps {
+export interface ICheckboxProps extends IProps {
   variation?: "slider" | "toggle";
 }
 

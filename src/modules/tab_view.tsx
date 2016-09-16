@@ -7,7 +7,7 @@ import Icon from "../components/icon_view";
 // import "semantic-ui-css/components/tab.css";
 // import "semantic-ui-css/components/tab.js";
 
-interface ITab {
+export interface ITab {
   title: string;
   text?: string;
   children?: any;
@@ -17,7 +17,7 @@ interface ITab {
   icon?: string;
 }
 
-interface ITabs {
+export interface ITabs {
   id: string;
   children?: any;
   classes?: string;

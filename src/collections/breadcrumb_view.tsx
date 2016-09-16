@@ -4,14 +4,14 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/breadcrumb.css";
 
-interface IProps {
+export interface IBreadcrumbsProps {
   classes?: string;
   children?: any;
   divider?: string;
   dividerIcon?: string;
 }
 
-export const Breadcrumbs = ({ classes, children, divider, dividerIcon }: IProps) => {
+export const Breadcrumbs = ({ classes, children, divider, dividerIcon }: IBreadcrumbsProps) => {
   const crumbs: any[] = [];
   if (children) {
     if (children.length) {
@@ -41,7 +41,7 @@ export const Breadcrumbs = ({ classes, children, divider, dividerIcon }: IProps)
 
 Breadcrumbs['displayName'] = 'Breadcrumbs';
 
-interface IBreadcrumbProps {
+export interface IBreadcrumbProps {
   text?: string;
   link?: any;
   active?: boolean;

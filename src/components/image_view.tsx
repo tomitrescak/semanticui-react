@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/image.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   src?: string;
@@ -47,7 +47,7 @@ export const Image = (props: IProps) => (
 
 Image['displayName'] = 'Image';
 
-interface IImageProps extends IProps {
+export interface IImageProps extends IProps {
   link: string;
 }
 

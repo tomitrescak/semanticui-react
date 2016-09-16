@@ -3,7 +3,7 @@ import * as css from "classnames";
 import config from "../config/config";
 // import "semantic-ui-css/components/label.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   icon?: string;

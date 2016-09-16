@@ -5,7 +5,7 @@ import * as css from "classnames";
 // import "semantic-ui-css/components/rating.js";
 
 
-interface IProps {
+export interface IProps {
   id: string;
   classes?: string;
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";

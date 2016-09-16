@@ -7,7 +7,7 @@ import config from "../config/config";
 // import "semantic-ui-css/components/search.js";
 
 
-interface IProps {
+export interface IProps {
   classes?: string;
   id: string;
   text: string;

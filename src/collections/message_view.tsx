@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/message.css";
 
-interface IProps extends IColor {
+export interface IProps extends IColor {
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
   classes?: string;
   children?: any;

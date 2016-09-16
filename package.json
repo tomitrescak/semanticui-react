@@ -6,7 +6,6 @@
     "type": "git",
     "url": "https://github.com/tomitrescak/semanticui-react.git"
   },
-  "typings": "./config/semanticui-react.d.ts",
   "license": "MIT",
   "scripts": {
     "lint": "eslint src",

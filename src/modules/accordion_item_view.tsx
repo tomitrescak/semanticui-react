@@ -2,7 +2,7 @@ import * as React from "react";
 import * as css from "classnames";
 import config from "../config/config";
 
-interface IProps {
+export interface IProps {
   children?: any;
   title: string;
   active?: boolean;

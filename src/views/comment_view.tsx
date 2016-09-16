@@ -5,7 +5,7 @@ import Button, { IButtonProps } from "../components/button_view";
 
 // import "semantic-ui-css/components/comment.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   header?: string;
@@ -46,12 +46,12 @@ export class Comments extends React.Component<IProps, {}> {
   }
 }
 
-interface IAction {
+export interface IAction {
   name: string;
   handler: Function;
 }
 
-interface IItemProps {
+export interface IItemProps {
   image?: string;
   date: string;
   children?: any;

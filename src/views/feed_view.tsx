@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/feed.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   size?: "mini" | "small" | "large"
@@ -16,12 +16,12 @@ export const Feed = ({classes, children, size}: IProps) => (
   </div>
 );
 
-interface ILinkImage {
+export interface ILinkImage {
   src: string;
   link: string;
 }
 
-interface IItemProps {
+export interface IItemProps {
   image?: string;
   date?: string;
   children?: any;

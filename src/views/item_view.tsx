@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/item.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   loading?: boolean;
@@ -23,7 +23,7 @@ interface IMeta {
   description?: string;
 }
 
-interface IItemProps {
+export interface IItemProps {
   image?: string;
   icon?: string;
   header?: string;

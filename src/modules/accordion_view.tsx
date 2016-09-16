@@ -6,7 +6,7 @@ import * as css from "classnames";
 // import "semantic-ui-css/components/accordion.js";
 // import "semantic-ui-css/components/accordion.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   styled?: boolean;
   exclusive?: boolean;

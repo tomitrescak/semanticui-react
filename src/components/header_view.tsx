@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/header.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   icon?: string;

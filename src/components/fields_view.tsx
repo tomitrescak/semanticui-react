@@ -4,7 +4,7 @@ import config from "../config/config";
 
 const names = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen"];
 
-interface IFieldsProps {
+export interface IFieldsProps {
   children?: any;
   type: "inline" | "grouped";
 }
@@ -17,7 +17,7 @@ export const Fields = ({ children, type }: IFieldsProps) => (
 
 Fields['displayName'] = 'Fields';
 
-interface IFieldProps {
+export interface IFieldProps {
   children?: any;
   type: "inline" | "grouped";
   text?: string;

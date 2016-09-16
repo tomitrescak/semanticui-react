@@ -5,7 +5,7 @@ import * as css from "classnames";
 
 const names = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen"];
 
-interface IProps {
+export interface IProps {
   classes?: string;
   columns?: number;
   children?: any;

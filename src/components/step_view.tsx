@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/step.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
   ordered?: boolean;
@@ -33,7 +33,7 @@ export const Steps = ({classes, children, ordered, vertical, fluid, stackable, a
   </div>
 );
 
-interface IStepProps {
+export interface IStepProps {
   active?: boolean;
   icon?: string;
   title: string;

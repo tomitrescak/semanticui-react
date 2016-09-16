@@ -4,7 +4,7 @@ import config from "../config/config";
 
 // import "semantic-ui-css/components/divider.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   style?: Object;
   text: string;

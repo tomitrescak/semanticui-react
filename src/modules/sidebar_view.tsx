@@ -5,7 +5,7 @@ import * as css from "classnames";
 // import "semantic-ui-css/components/sidebar.css";
 // import "semantic-ui-css/components/sidebar.js";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   id: string;
   children?: any;

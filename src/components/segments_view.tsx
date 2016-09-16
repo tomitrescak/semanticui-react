@@ -3,7 +3,7 @@ import * as css from "classnames";
 
 // import "semantic-ui-css/components/segment.css";
 
-interface IProps {
+export interface IProps {
   classes?: string;
   children?: any;
 }

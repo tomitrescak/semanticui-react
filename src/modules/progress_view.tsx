@@ -5,7 +5,7 @@ import * as css from "classnames";
 // import "semantic-ui-css/components/progress.js";
 
 
-interface IProps {
+export interface IProps {
   id: string;
   classes?: string;
   color?: "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
