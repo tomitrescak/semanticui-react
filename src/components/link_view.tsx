@@ -7,7 +7,7 @@ import config from "../config/config";
 export interface IProps {
   classes?: string;
   style?: Object;
-  text: string;
+  text?: string;
   link: string;
   icon?: string;
   onClick?: Function;

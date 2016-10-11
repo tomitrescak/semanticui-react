@@ -28,7 +28,7 @@ export interface IItemProps {
   likes?: string;
   extraImages?: ILinkImage[];
   extraText?: string;
-  text?: string;
+  text?: string | Object;
   summary?: string;
 }
 

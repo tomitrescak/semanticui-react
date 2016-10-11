@@ -12,7 +12,7 @@ export interface IProps {
   classes?: string;
   color?: "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
   defaultText?: string;
-  text?: string;
+  text?: string | Object;
   selection?: boolean;
   fluid?: boolean;
   search?: boolean;
@@ -91,7 +91,7 @@ export interface IDropdownItem {
   value: string;
   image?: string;
   icon?: string;
-  text?: string;
+  text?: string | Object;
   children?: any;
 }
 

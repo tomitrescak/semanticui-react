@@ -2,13 +2,13 @@ import * as React from "react";
 import * as css from "classnames";
 import config from "../config/config";
 
-// import "semantic-ui-css/components/message.css";
+import { IColor } from '../config/interfaces';
 
 export interface IProps extends IColor {
   size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
   classes?: string;
   children?: any;
-  header?: string;
+  header?: string | Object;
   icon?: string;
   attached?: boolean;
   compact?: boolean;

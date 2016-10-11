@@ -12,7 +12,7 @@ export interface IProps {
   value: number;
   total: number;
   indicating?: boolean;
-  text?: string;
+  text?: string | Object;
   showProgress?: boolean;
   successText?: string;
   progressText?: string;

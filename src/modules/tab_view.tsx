@@ -8,8 +8,8 @@ import Icon from "../components/icon_view";
 // import "semantic-ui-css/components/tab.js";
 
 export interface ITab {
-  title: string;
-  text?: string;
+  title?: string;
+  text?: string | Object;
   children?: any;
   url?: string;
   name?: string;
@@ -25,7 +25,7 @@ export interface ITabs {
   activeTab?: string;
   type?: "tabs" | "buttons" | "lines";
   linkBased?: boolean;
-  selected?: Function;
+  selected?: (tabName: string) => void;
 }
 
 export class Tabs extends React.Component<ITabs, {}> {

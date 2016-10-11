@@ -11,7 +11,7 @@ import config from "../config/config";
 export interface IProps {
   id: string;
   classes?: string;
-  header?: string;
+  header?: string | Object;
   children?: any;
   image?: boolean;
   small?: boolean;

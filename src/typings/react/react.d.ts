@@ -1971,7 +1971,7 @@ declare namespace __React {
         open?: boolean;
         optimum?: number;
         pattern?: string;
-        placeholder?: string;
+        placeholder?: string | Object;
         poster?: string;
         preload?: string;
         radioGroup?: string;

@@ -3,16 +3,16 @@ import * as css from "classnames";
 import config from "../config/config";
 // import "semantic-ui-css/components/label.css";
 
-export interface IProps {
+import { IColor, ISize } from '../config/interfaces';
+ 
+export interface IProps extends IColor, ISize {
   classes?: string;
   children?: any;
   icon?: string;
   rightIcon?: string;
   image?: string;
   detail?: string;
-  color?: "primary" | "secondary" | "success" | "failure" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
   pointing?: "left" | "right" | "above" | "below";
-  size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
   basic?: boolean;
   corner?: "left" | "right";
   tag?: boolean;
@@ -22,7 +22,7 @@ export interface IProps {
   floating?: boolean;
   circular?: boolean;
   style?: any;
-  text?: string;
+  text?: string | Object;
   link?: string;
   onClick?: Function;
 }

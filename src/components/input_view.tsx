@@ -6,7 +6,7 @@ import config from "../config/config";
 
 export interface IProps {
   classes?: string;
-  placeholder?: string;
+  placeholder?: string | Object;
   label?: string;
   icon?: string;
   iconPosition?: string;
@@ -22,6 +22,7 @@ export interface IProps {
   search?: boolean;
   disabled?: boolean;
   readOnly?: boolean;
+  step?: number;
 }
 
 export default class Input extends React.Component<IProps, {}> {
@@ -59,6 +60,7 @@ export default class Input extends React.Component<IProps, {}> {
             defaultValue={this.props.defaultValue}
             value={this.props.value}
             readOnly={this.props.readOnly}
+            step={this.props.step}
           />
           { this.props.icon ? <i className={css(this.props.icon, "icon")} /> : null }
           { this.props.rightLabel ? <div className="ui label">{ config.i18n(this.props.rightLabel) }</div> : null }

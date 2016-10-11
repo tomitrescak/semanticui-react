@@ -15,7 +15,7 @@ export interface IProps {
   id?: string;
   name?: string;
   children?: any;
-  text?: string;
+  text?: string | Object;
   checked?: boolean;
   disabled?: boolean;
   fitted?: boolean;

@@ -26,13 +26,13 @@ interface IMeta {
 export interface IItemProps {
   image?: string;
   icon?: string;
-  header?: string;
-  description: string;
+  header?: string | Object;
+  description?: string;
   link?: string;
   children?: any;
   imageSize?: "tiny" | "small";
   alignment?: "middle aligned" | "top aligned" | "middle aligned";
-  key: any;
+  key?: any;
 }
 
 export const Item = {

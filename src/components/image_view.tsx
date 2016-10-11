@@ -14,10 +14,10 @@ export interface IProps {
   fluid?: boolean;
   rounded?: boolean;
   circular?: boolean;
-  align: "top" | "middle" | "bottom";
+  align?: "top" | "middle" | "bottom";
   centered?: boolean;
   spaced?: boolean;
-  float: "left" | "right";
+  float?: "left" | "right";
 }
 
 function createClass(c: IProps) {

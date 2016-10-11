@@ -15,6 +15,7 @@ export { Fields, Field } from "./components/fields_view";
 export { default as GridSplitter } from "./components/grid_splitter";
 export { default as Grid} from "./collections/grid_view";
 export { Header1, Header2, Header3, Header4, Header5 } from "./components/header_view";
+export { default as Icon } from "./components/icon_view";
 export { default as Input} from "./components/input_view";
 export { Items, Item } from "./views/item_view";
 export { Image, ImageLink } from "./components/image_view";

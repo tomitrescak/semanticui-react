@@ -9,7 +9,7 @@ import config from "../config/config";
 
 export interface IProps {
   icon?: string;
-  text?: string;
+  text?: string | Object;
   children?: any;
   id: string;
 }

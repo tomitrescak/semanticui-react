@@ -18,7 +18,7 @@ export interface IProps {
   block?: boolean;
   color?: "success" | "failure" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
   inverted?: boolean;
-  text?: string;
+  text?: string | Object;
 }
 
 function createClass(params: IProps) {

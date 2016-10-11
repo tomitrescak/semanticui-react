@@ -12,7 +12,7 @@ export interface IProps {
   fluid?: boolean;
   stackable?: boolean;
   attached?: "top" | "bottom";
-  text?: string;
+  text?: string | Object;
 }
 
 export const Steps = ({classes, children, ordered, vertical, fluid, stackable, attached, text }: IProps) => (

@@ -8,7 +8,7 @@ import Button, { IButtonProps } from "../components/button_view";
 export interface IProps {
   classes?: string;
   children?: any;
-  header?: string;
+  header?: string | Object;
   commentPlaceholder?: string;
   addButtonText: string;
   previewButtonText?: string;
@@ -57,7 +57,7 @@ export interface IItemProps {
   children?: any;
   author: string;
   actions?: IAction[];
-  text?: string;
+  text?: string | Object;
 }
 
 export const Comment = ({ children, image, date, author, actions, text }: IItemProps) => (

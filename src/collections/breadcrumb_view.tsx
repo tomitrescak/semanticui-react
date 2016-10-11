@@ -42,10 +42,10 @@ export const Breadcrumbs = ({ classes, children, divider, dividerIcon }: IBreadc
 Breadcrumbs['displayName'] = 'Breadcrumbs';
 
 export interface IBreadcrumbProps {
-  text?: string;
+  text?: string | Object;
   link?: any;
   active?: boolean;
-  children: any;
+  children?: any;
 }
 
 export const Breadcrumb = ({ text, link, active, children }: IBreadcrumbProps) => (

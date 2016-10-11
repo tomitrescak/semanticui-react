@@ -8,7 +8,7 @@ export interface IProps {
   children?: any;
   icon?: string;
   inverted?: boolean;
-  orientation: "vertical" | "horizontal";
+  orientation?: "vertical" | "horizontal";
   isHeader?: boolean;
 }
 

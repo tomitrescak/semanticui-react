@@ -3,6 +3,8 @@ import * as css from "classnames";
 
 // import "semantic-ui-css/components/menu.css";
 
+import { IColor } from '../config/interfaces';
+
 export interface IProps extends IColor {
   classes?: string;
   children?: any;

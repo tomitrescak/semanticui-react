@@ -6,7 +6,7 @@ const names = ["", "one", "two", "three", "four", "five", "six", "seven", "eight
 
 export interface IFieldsProps {
   children?: any;
-  type: "inline" | "grouped";
+  type?: "inline" | "grouped";
 }
 
 export const Fields = ({ children, type }: IFieldsProps) => (
@@ -19,10 +19,10 @@ Fields['displayName'] = 'Fields';
 
 export interface IFieldProps {
   children?: any;
-  type: "inline" | "grouped";
-  text?: string;
+  type?: "inline" | "grouped";
+  text?: string | Object;
   label?: string;
-  width: number;
+  width?: number;
   style?: any;
 }
 

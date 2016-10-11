@@ -24,7 +24,7 @@ const { classes } = jss.createStyleSheet({
 
 export interface IProps {
   classes?: string;
-  placeholder?: string;
+  placeholder?: string | Object;
   label?: string;
   onChange?: Function;
   value?: any;

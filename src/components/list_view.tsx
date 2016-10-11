@@ -54,7 +54,7 @@ export interface IListItemProps {
   bullet?: string;
   link?: any;
   onClick?: Function;
-  text?: string;
+  text?: string | Object;
 }
 
 export const ListItem = ({ children, icon, image, float, bullet, classes, link, onClick, text }: IListItemProps) => (

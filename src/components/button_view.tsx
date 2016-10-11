@@ -2,23 +2,19 @@ import * as React from "react";
 import * as css from "classnames";
 import config from "../config/config";
 
-// import "semantic-ui-css/components/reset.css";
-// import "semantic-ui-css/components/button.css";
-// import "semantic-ui-css/components/icon.css";
+import { IColor, ISize } from '../config/interfaces';
 
-export interface IButtonProps {
+export interface IButtonProps extends IColor, ISize {
   classes?: string;
-  text?: string;
+  text?: string | Object;
   basic?: boolean;
   type?: "submit" | "button";
-  color?: "primary" | "secondary" | "success" | "failure" | "blue" | "red" | "olive" | "orange" | "yellow" | "green" | "teal" | "blue" | "violet" | "pink" | "purple" | "brown" | "grey" | "black";
   inverted?: boolean;
   compact?: boolean;
   icon?: string;
   labeled?: "left" | "right" | boolean;
   floated?: "left" | "right";
   loading?: boolean;
-  size?: "mini" | "tiny" | "small" | "medium" | "large" | "huge" | "massive";
   circular?: boolean;
   toggle?: "active" | "inactive";
   fluid?: boolean;
